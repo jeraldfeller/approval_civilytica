@@ -1,0 +1,10 @@
+/app/config/config.php
+/app/cookies/*
+!/app/cookies/.gitkeep
+/app/docs/*
+!/app/docs/.gitkeep
+/app/logs/*
+!/app/logs/.gitkeep
+/nbproject/
+/vendor/
+/CRONLOCK

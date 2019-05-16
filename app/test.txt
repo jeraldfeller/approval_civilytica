@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head id="ctl00_headMaster"><title>
+	
+</title><meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black" /><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><link href="../Styles.Infor.css" type="text/css" rel="stylesheet" /><link id="ctl00_selectedStyleSheet" href="../Styles.css" type="text/css" rel="stylesheet" /><link rel="shortcut icon" href="../favicon.ico" /><meta name="DC.Title" /><div class="environment-information">
+<h1>Hills Shire Council - Online Services & Payments</h1>
+
+<div style="background:white; padding:6px 10px;display:none" >
+  
+
+<!--<p><h2><font size="3">--> 
+<!--Software Maintenance Notice</h2></p>-->
+
+
+<p style="display:none"><strong>
+IMPORTANT NOTICE:  At times, 10.7 Planning Certificates are failing to send out to nominated email addresses through the automated service.  If you have not received your certificate within 2 hours please contact Council on 9843 0555 to have the certificate emailed to you manually.  
+The matter is currently being investigated and we appreciate your understanding.
+</strong></p>
+<!-- <p><strong> eServices Planned interruptions: Saturday 8:00 am 20 Oct - Sun 5pm 21 Oct.</strong></p>
+<p>There will be periods during this time where eServices functions such as Section 149, 603, 88G & 735A Certificates, Payments, Application lodgement, DA Searches and Rates will be unavailable.</p> -->
+
+</div>
+</div>
+<h2 style="display:none">
+IMPORTANT PLEASE READ:  From 8:00am Monday 17th July 2017, The Hills Shire Council will NO LONGER be accepting applications for S149 Planning Certificates for properties which now fall within the City of Parramatta Council.  
+Please go to City of Parramatta’s website <a href="https://www.cityofparramatta.nsw.gov.au">https://www.cityofparramatta.nsw.gov.au</a> or phone 9806 5050 to order.
+</h2>
+
+<!-- <p><strong> eServices Planned interruptions: Saturday 8:00 am 20 Oct - Sun 5pm 21 Oct</strong></p>. 
+<p>There will be periods during this time where eServices functions such as Section 149, 603, 88G & 735A Certificates, Payments, Application lodgement, DA Searches and Rates will be unavailable.</p> -->
+<style type="text/css">
+	.ctl00_mHeader_Menubar_menu_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_mHeader_Menubar_menu_1 { text-decoration:none; }
+	.ctl00_mHeader_Menubar_menu_2 {  }
+	.ctl00_mHeader_Menubar_menu_3 { border-style:none; }
+	.ctl00_mHeader_Menubar_menu_4 {  }
+	.ctl00_mHeader_Menubar_menu_5 {  }
+	.ctl00_mHeader_Menubar_menu_6 { border-style:none; }
+	.ctl00_mHeader_Menubar_menu_7 {  }
+	.ctl00_mHeader_Menubar_menu_8 {  }
+	.ctl00_mHeader_Menubar_menu_9 { border-style:none; }
+	.ctl00_mHeader_Menubar_menu_10 {  }
+	.ctl00_mHeader_Menubar_menu_11 { border-style:none; }
+	.ctl00_mHeader_Menubar_menu_12 {  }
+	.ctl00_mHeader_Menubar_menu_13 { border-style:none; }
+	.ctl00_mHeader_Menubar_menu_14 {  }
+
+</style></head>
+    <body>
+        <form name="aspnetForm" method="post" action="EnquirySummaryView.aspx?PageNumber=21" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MTExMDU2MDAPZBYCZg9kFgRmD2QWAgIMDxYCHgRocmVmBQpTdHlsZXMuY3NzZAIBD2QWBgIDD2QWAgIHD2QWBAICD2QWAgIBDzwrAA0CAA8WAh4LXyFEYXRhQm91bmRnZAwUKwAHBRcwOjAsMDoxLDA6MiwwOjMsMDo0LDA6NRQrAAIWDB4EVGV4dAUMQXBwbGljYXRpb25zHgtOYXZpZ2F0ZVVybAUXQWx0ZXJuYXRlTWVudS5hc3B4P2lkPTUeB0VuYWJsZWRnHgpTZWxlY3RhYmxlZx4IRGF0YVBhdGgFIC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTFdHglEYXRhQm91bmRnFCsABQUPMDowLDA6MSwwOjIsMDozFCsAAhYMHwIFFUxvZGdlIE5ldyBBcHBsaWNhdGlvbh8DBTkvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvQXBwbGljYXRpb25zL05ld0FwcGxpY2F0aW9uLmFzcHgfBGcfBWcfBgUwLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTFdHwdnZBQrAAIWDB8CBRpDb21wbGV0ZSBMb2RnZW1lbnQgUHJvY2Vzcx8DBTovZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvQXBwbGljYXRpb25zL0VkaXRBcHBsaWNhdGlvbi5hc3B4HwRnHwVnHwYFMC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT0yXR8HZ2QUKwACFgwfAgUTQXBwbGljYXRpb24gRW5xdWlyeR8DBT0vZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvQXBwbGljYXRpb25zL0FwcGxpY2F0aW9uRW5xdWlyeS5hc3B4HwRnHwVnHwYFMC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT0zXR8HZ2QUKwACFgwfAgUXQXBwbGljYXRpb24gRmVlIEVucXVpcnkfAwU6L2VQYXRod2F5L1Byb2R1Y3Rpb24vV2ViL0FwcGxpY2F0aW9ucy9GZWVFbnF1aXJ5VHlwZXMuYXNweB8EZx8FZx8GBTAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9NF0fB2dkFCsAAhYMHwIFDENlcnRpZmljYXRlcx8DBRdBbHRlcm5hdGVNZW51LmFzcHg/aWQ9Nh8EZx8FZx8GBSAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT0yXR8HZxQrAAQFCzA6MCwwOjEsMDoyFCsAAhYMHwIFD05ldyBDZXJ0aWZpY2F0ZR8DBTkvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvQ2VydGlmaWNhdGVzL05ld0NlcnRpZmljYXRlLmFzcHgfBGcfBWcfBgUwLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9Ml0vKltwb3NpdGlvbigpPTFdHwdnZBQrAAIWDB8CBRBFZGl0IENlcnRpZmljYXRlHwMFOi9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9DZXJ0aWZpY2F0ZXMvRWRpdENlcnRpZmljYXRlLmFzcHgfBGcfBWcfBgUwLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9Ml0vKltwb3NpdGlvbigpPTJdHwdnZBQrAAIWDB8CBRNDZXJ0aWZpY2F0ZSBFbnF1aXJ5HwMFPS9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9DZXJ0aWZpY2F0ZXMvQ2VydGlmaWNhdGVFbnF1aXJ5LmFzcHgfBGcfBWcfBgUwLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9Ml0vKltwb3NpdGlvbigpPTNdHwdnZBQrAAIWDB8CBQhQYXltZW50cx8DBRhBbHRlcm5hdGVNZW51LmFzcHg/aWQ9MTUfBGcfBWcfBgUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9M10fB2cUKwADBQcwOjAsMDoxFCsAAhYMHwIFC05ldyBQYXltZW50HwMFMy9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9QYXltZW50cy9QYXltZW50VHlwZXMuYXNweB8EZx8FZx8GBTAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT0zXS8qW3Bvc2l0aW9uKCk9MV0fB2dkFCsAAhYMHwIFDEVkaXQgUGF5bWVudB8DBTEvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvUGF5bWVudHMvRWRpdFN1Ym1pdC5hc3B4HwRnHwVnHwYFMC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTNdLypbcG9zaXRpb24oKT0yXR8HZ2QUKwACFgwfAgUFT3RoZXIfAwUXQWx0ZXJuYXRlTWVudS5hc3B4P2lkPTQfBGcfBWcfBgUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9NF0fB2cUKwAEBQswOjAsMDoxLDA6MhQrAAIWDh8CBQRIZWxwHwMFRC9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9oZWxwL2hlbHAuYXNweD9wYWdlPUVucXVpcnlTdW1tYXJ5Vmlldy5hc3B4HgZUYXJnZXQFBl9ibGFuax8EZx8FZx8GBTAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT00XS8qW3Bvc2l0aW9uKCk9MV0fB2dkFCsAAhYOHwIFCkNvbnRhY3QgVXMfAwUST3RoZXIvQ29udGFjdC5hc3B4HwgFBl9ibGFuax8EZx8FZx8GBTAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT00XS8qW3Bvc2l0aW9uKCk9Ml0fB2dkFCsAAhYMHwIFBEhvbWUfAwUlL2VQYXRod2F5L1Byb2R1Y3Rpb24vV2ViL2RlZmF1bHQuYXNweB8EZx8FZx8GBTAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT00XS8qW3Bvc2l0aW9uKCk9M10fB2dkFCsAAhYMHwIFD0dlbmVyYWwgRW5xdWlyeR8DBRhBbHRlcm5hdGVNZW51LmFzcHg/aWQ9MjIfBGcfBWcfBgUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9NV0fB2cUKwAEBQswOjAsMDoxLDA6MhQrAAIWDB8CBQ1FbnF1aXJ5IExpc3RzHwMFOS9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9HZW5lcmFsRW5xdWlyeS9FbnF1aXJ5TGlzdHMuYXNweB8EZx8FZx8GBTAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT01XS8qW3Bvc2l0aW9uKCk9MV0fB2dkFCsAAhYMHwIFE0FwcGxpY2F0aW9uIEVucXVpcnkfAwVIL2VQYXRod2F5L1Byb2R1Y3Rpb24vV2ViL0dlbmVyYWxFbnF1aXJ5L0VucXVpcnlMaXN0cy5hc3B4P01vZHVsZUNvZGU9TEFQHwRnHwVnHwYFMC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTVdLypbcG9zaXRpb24oKT0yXR8HZ2QUKwACFgwfAgUQUHJvcGVydHkgRW5xdWlyeR8DBUgvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvR2VuZXJhbEVucXVpcnkvRW5xdWlyeUxpc3RzLmFzcHg/TW9kdWxlQ29kZT1MUEEfBGcfBWcfBgUwLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9NV0vKltwb3NpdGlvbigpPTNdHwdnZBQrAAIWDB8CBQRIb21lHwMFJS9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9kZWZhdWx0LmFzcHgfBGcfBWcfBgUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9Nl0fB2dkZAIED2QWBAIBDw9kFgIeB29uY2xpY2sF4gFqYXZhc2NyaXB0OiB7IGlmIChkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbW9iaWxlTWVudScpLmNsYXNzTmFtZSA9PT0gJ21vYmlsZU1lbnUnKSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbW9iaWxlTWVudScpLmNsYXNzTmFtZSA9ICdtb2JpbGVNZW51IGhpZGRlbic7IGVsc2UgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ21vYmlsZU1lbnUnKS5jbGFzc05hbWUgPSAnbW9iaWxlTWVudSc7ICB9ZAIDDxYCHgtfIUl0ZW1Db3VudAIVFioCAQ9kFgICBw8PFgQfAwUXQWx0ZXJuYXRlTWVudS5hc3B4P2lkPTUfAgUMQXBwbGljYXRpb25zZGQCAg9kFgYCBQ8WAh8CBQQ8dWw+ZAIHDw8WBB8DBTkvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvQXBwbGljYXRpb25zL05ld0FwcGxpY2F0aW9uLmFzcHgfAgUVTG9kZ2UgTmV3IEFwcGxpY2F0aW9uZGQCCQ8WAh8CBQU8L2xpPmQCAw9kFgQCBw8PFgQfAwU6L2VQYXRod2F5L1Byb2R1Y3Rpb24vV2ViL0FwcGxpY2F0aW9ucy9FZGl0QXBwbGljYXRpb24uYXNweB8CBRpDb21wbGV0ZSBMb2RnZW1lbnQgUHJvY2Vzc2RkAgkPFgIfAgUFPC9saT5kAgQPZBYEAgcPDxYEHwMFPS9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9BcHBsaWNhdGlvbnMvQXBwbGljYXRpb25FbnF1aXJ5LmFzcHgfAgUTQXBwbGljYXRpb24gRW5xdWlyeWRkAgkPFgIfAgUFPC9saT5kAgUPZBYEAgcPDxYEHwMFOi9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9BcHBsaWNhdGlvbnMvRmVlRW5xdWlyeVR5cGVzLmFzcHgfAgUXQXBwbGljYXRpb24gRmVlIEVucXVpcnlkZAIJDxYCHwIFBTwvbGk+ZAIGD2QWBgIBDxYCHwIFBTwvdWw+ZAIDDxYCHwIFBTwvbGk+ZAIHDw8WBB8DBRdBbHRlcm5hdGVNZW51LmFzcHg/aWQ9Nh8CBQxDZXJ0aWZpY2F0ZXNkZAIHD2QWBgIFDxYCHwIFBDx1bD5kAgcPDxYEHwMFOS9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9DZXJ0aWZpY2F0ZXMvTmV3Q2VydGlmaWNhdGUuYXNweB8CBQ9OZXcgQ2VydGlmaWNhdGVkZAIJDxYCHwIFBTwvbGk+ZAIID2QWBAIHDw8WBB8DBTovZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvQ2VydGlmaWNhdGVzL0VkaXRDZXJ0aWZpY2F0ZS5hc3B4HwIFEEVkaXQgQ2VydGlmaWNhdGVkZAIJDxYCHwIFBTwvbGk+ZAIJD2QWBAIHDw8WBB8DBT0vZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvQ2VydGlmaWNhdGVzL0NlcnRpZmljYXRlRW5xdWlyeS5hc3B4HwIFE0NlcnRpZmljYXRlIEVucXVpcnlkZAIJDxYCHwIFBTwvbGk+ZAIKD2QWBgIBDxYCHwIFBTwvdWw+ZAIDDxYCHwIFBTwvbGk+ZAIHDw8WBB8DBRhBbHRlcm5hdGVNZW51LmFzcHg/aWQ9MTUfAgUIUGF5bWVudHNkZAILD2QWBgIFDxYCHwIFBDx1bD5kAgcPDxYEHwMFMy9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9QYXltZW50cy9QYXltZW50VHlwZXMuYXNweB8CBQtOZXcgUGF5bWVudGRkAgkPFgIfAgUFPC9saT5kAgwPZBYEAgcPDxYEHwMFMS9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9QYXltZW50cy9FZGl0U3VibWl0LmFzcHgfAgUMRWRpdCBQYXltZW50ZGQCCQ8WAh8CBQU8L2xpPmQCDQ9kFgYCAQ8WAh8CBQU8L3VsPmQCAw8WAh8CBQU8L2xpPmQCBw8PFgQfAwUXQWx0ZXJuYXRlTWVudS5hc3B4P2lkPTQfAgUFT3RoZXJkZAIOD2QWBgIFDxYCHwIFBDx1bD5kAgcPDxYEHwMFRC9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9oZWxwL2hlbHAuYXNweD9wYWdlPUVucXVpcnlTdW1tYXJ5Vmlldy5hc3B4HwIFBEhlbHBkZAIJDxYCHwIFBTwvbGk+ZAIPD2QWBAIHDw8WBB8DBRkuLi9XZWIvT3RoZXIvQ29udGFjdC5hc3B4HwIFCkNvbnRhY3QgVXNkZAIJDxYCHwIFBTwvbGk+ZAIQD2QWBAIHDw8WBB8DBSUvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvZGVmYXVsdC5hc3B4HwIFBEhvbWVkZAIJDxYCHwIFBTwvbGk+ZAIRD2QWBgIBDxYCHwIFBTwvdWw+ZAIDDxYCHwIFBTwvbGk+ZAIHDw8WBB8DBRhBbHRlcm5hdGVNZW51LmFzcHg/aWQ9MjIfAgUPR2VuZXJhbCBFbnF1aXJ5ZGQCEg9kFgYCBQ8WAh8CBQQ8dWw+ZAIHDw8WBB8DBTkvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvR2VuZXJhbEVucXVpcnkvRW5xdWlyeUxpc3RzLmFzcHgfAgUNRW5xdWlyeSBMaXN0c2RkAgkPFgIfAgUFPC9saT5kAhMPZBYEAgcPDxYEHwMFSC9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9HZW5lcmFsRW5xdWlyeS9FbnF1aXJ5TGlzdHMuYXNweD9Nb2R1bGVDb2RlPUxBUB8CBRNBcHBsaWNhdGlvbiBFbnF1aXJ5ZGQCCQ8WAh8CBQU8L2xpPmQCFA9kFgQCBw8PFgQfAwVIL2VQYXRod2F5L1Byb2R1Y3Rpb24vV2ViL0dlbmVyYWxFbnF1aXJ5L0VucXVpcnlMaXN0cy5hc3B4P01vZHVsZUNvZGU9TFBBHwIFEFByb3BlcnR5IEVucXVpcnlkZAIJDxYCHwIFBTwvbGk+ZAIVD2QWAgIHDw8WBB8DBSUvZVBhdGh3YXkvUHJvZHVjdGlvbi9XZWIvZGVmYXVsdC5hc3B4HwIFBEhvbWVkZAIHD2QWCgIBD2QWAmYPZBYEZg9kFgJmD2QWAgIBDw8WAh8CZWRkAgEPZBYCZg9kFgJmD2QWAmYPZBYEZg9kFgJmDw8WAh4ISW1hZ2VVcmwFLi9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9JbWFnZXMvc3RhZ2UtYmFjay5naWZkZAIBD2QWAmYPDxYCHwsFLi9lUGF0aHdheS9Qcm9kdWN0aW9uL1dlYi9JbWFnZXMvc3RhZ2UtbmV4dC5naWZkZAIFDw8WBh4IQ3NzQ2xhc3MFFUFsdGVybmF0ZUNvbnRlbnRQYW5lbB4HVG9vbFRpcGUeBF8hU0ICAmRkAgcPDxYGHwIFTFVuZm9ydHVuYXRlbHkgZm9yIHNlY3VyaXR5IHJlYXNvbnMgeW91IGFyZSBub3QgYWxsb3dlZCB0byBzZWUgdGhlc2UgcmVzdWx0cy4fDWUeB1Zpc2libGVoZGQCCQ9kFgJmD2QWAgIBD2QWBGYPZBYCZg9kFgJmDw8WAh8CBQ1QYWdlIDIxIG9mIDE5ZGQCAQ9kFgRmD2QWBAIBDw8WBB4LUG9zdEJhY2tVcmwFNX4vR2VuZXJhbEVucXVpcnkvRW5xdWlyeVN1bW1hcnlWaWV3LmFzcHg/UGFnZU51bWJlcj0xHw0FEUZpcnN0IHBhZ2UgMSAtIDMwZGQCAg8PFgQfEAU2fi9HZW5lcmFsRW5xdWlyeS9FbnF1aXJ5U3VtbWFyeVZpZXcuYXNweD9QYWdlTnVtYmVyPTIwHw0FF1ByZXZpb3VzIHBhZ2UgNTcxIC0gNjAwZGQCAg9kFgRmDw8WAh8PaGRkAgEPDxYCHw9oZGQCDQ8PFgIfD2hkZAILD2QWAgIBDw8WAh8PaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYEBRtjdGwwMCRNYWluQm9keUNvbnRlbnQkY3RsMDUFJ2N0bDAwJE1haW5Cb2R5Q29udGVudCRDYW5jZWxJbWFnZUJ1dHRvbgU3Y3RsMDAkTWFpbkJvZHlDb250ZW50JG1QYWdpbmdDb250cm9sJGZpcnN0UGFnZUh5cGVyTGluawU6Y3RsMDAkTWFpbkJvZHlDb250ZW50JG1QYWdpbmdDb250cm9sJHByZXZpb3VzUGFnZUh5cGVyTGluaylVX0LLsatvBE02STPi9UDQs8Cx71m3ZV7euG4DifHO" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ePathway/Production/Web/WebResource.axd?d=0DwgWgtCvDgsSntRFJ0G6Onhxc0x3JAc6SLRbuHo-cJy2_huQzTex5WRUNazRyp7KuzOg58kzUyxdaJdEmtQWbmH_wu3FdeS_SHL85uocLk1&amp;t=635201406466652144" type="text/javascript"></script>
+
+
+<script src="/ePathway/Production/Web/Scripts/spin.js" type="text/javascript"></script>
+<script src="/ePathway/Production/Web/Scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var spinner = new Spinner()
+                                                                                                        // Hide spinner when new page has loaded
+                                                                                                        $(window).load(function () {
+                                                                                                            //spinner.stop();
+                                                                                                            $('#inforLoading').hide();
+                                                                                                        });
+                                                                                                        // Display spinner after certain amount of time after postback
+                                                                                                        $(window).submit(function () {
+                                                                                                            setTimeout(function () {
+                                                                                                                // Show Spinner
+                                                                                                                $('#inforLoading').show();
+                                                                                                                //var target = document.getElementById('loading');
+                                                                                                                //spinner.spin(target);
+
+                                                                                                                // Hide the spinner if the page is invalid as the load function won't be triggered
+                                                                                                                if (typeof Page_IsValid != 'undefined') {
+                                                                                                                    if (Page_IsValid==false) {
+                                                                                                                        //spinner.stop();
+                                                                                                                        $('#inforLoading').hide();
+                                                                                                                    }  
+                                                                                                                }                                                                                                              
+
+                                                                                                            }, 100 );
+                                                                                                        });//]]>
+</script>
+
+<script src="/ePathway/Production/Web/ScriptResource.axd?d=z_XbX6mvsu0_8uS8FVn-3Z_hWytPSAG5RpifPUrtlXtcQaFR8LKb2seiUduXB8i4od5MqwI4NLkhD8u9NJ2xZnUC26iN_WX0VFrCXIl4P-qzwCxkhs_3X1lM2-TRRQXta3229jxOMMywGGlJhhMBFA2&amp;t=ffffffff8bf5d55e" type="text/javascript"></script>
+<script src="/ePathway/Production/Web/ScriptResource.axd?d=F4u6RwE3ImPqPAZtVnIrnJ58aEJE6KyJaRio8sOH91kJE7jQUDNwqH5cfOO_VnaITwiQkxPGNzdBIYLrS4Am4_29GT8bCPQIXmOKfBYUM3LJZO7xcTFycxHIxwzQNZuzwP2yetZaLZgylqLurvisosFtjg0d6TOP-ZEJwF3lKoY1&amp;t=348b0da" type="text/javascript"></script>
+<script src="/ePathway/Production/Web/ScriptResource.axd?d=VHBQHuB8ZtYLDMjaFypcUzyDkiJ-q2tiblv6x-W3JU1mH0hjVcl5MwJFh7hXatFxNsfE4A3_AKDoY5-ZUquxOWh0dmAwou1fPUhG9xt8M6mrm3rD1gWxGs41jbh5m_236G3hRnwROKlVFpSGkxQOJf6bXdRgaHsjNJhfrl4pUDo5dwycsGW0UOZubXN1ejGr0&amp;t=348b0da" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="kPf83vHUvocm8xfxgOY1ewPFFYhrJ8fXglL8Mr2cLZDKOcovv5yeQorhpHZcMdSGtMX-Z6SvgWTKu7E8HXd6_S1siB0BNjgl_NhUwk3mFUfcQ2UU-IoBPEdE4AAaX_eGCNXsXbPaUf2ync3I_9RSy67MvfvcHTp4ISY07lg8kVc1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAg2ryz8+A2dRXgjf6HPtr4Iltq8JISyhJYLKApbCVWpfesarO/kRFXGN+rPj5+oS19nStXNwr4OpZuzkDeUTrkNb9Hzj+S4c7IBvVaaugkTb66M/O2D3jVnLJ1YL65gMldC3oxB4y/pxlp6XvaP9eFCyXCDVbtE2mlACHZFiFPvHFHsQ+KyJY5lPwZgj5VkgT+Ehj1O0MzLqWtX00gBxZub" />
+</div>
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$masterScriptManager', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+            <div class="mainBody">
+                <div class="mainBodyHeader">
+                    
+
+<noscript>
+    <div id="javascriptMessage" class="javascriptdisabled" >
+        Please note, it has been detected that you have scripting disabled in your browser, this may cause some limitations to apply, and some functions may not be available at all
+    </div>
+</noscript>
+<div class="HeaderTop"> 
+
+    <!-- Header -->
+    <div class="Header">
+        <div class="HeaderLinks">
+            <ul><li><a class="HeaderLink" href="/ePathway/Production/Web/Login/Login.aspx">Sign In</a></li><li><a class="HeaderLink" href="/ePathway/Production/Web/Registration/Register.aspx">Register</a></li><li><a class="HeaderLink" href="Javascript:window.print();">Print Screen</a></li><li><a class="HeaderLink" href="http://www.thehills.nsw.gov.au" target="_blank">Return to Council Website</a></li><li id="ctl00_mHeader_CartHeaderCell" class="CartHeaderCell hidden"><a class="HeaderLink" href="/ePathway/Production/Web/ShoppingCart.aspx"><img src="/ePathway/Production/Web/Images/cart.gif" alt="View shopping cart" border="0" style="vertical-align:bottom;margin-bottom:2px;" /><span id="ctl00_mHeader_ShoppingCartSize"></span></a></li></ul>
+        </div>
+        <div class="HeaderImage">
+            <a id="ctl00_mHeader_mHeaderImage" href="../Default.aspx" style="display:inline-block;border-width:0px;"><img src="../Images/header.gif" alt="Missing header image" style="border-width:0px;" /></a>
+        </div>
+
+        
+    </div>
+    
+    
+<div id="ctl00_mHeader_Menubar_menuPanel" class="menupanel">
+	
+    <a href="#ctl00_mHeader_Menubar_menu_SkipLink"><img alt="Skip Navigation Links" src="/ePathway/Production/Web/WebResource.axd?d=ZDqNCA2TplFvE4_AHR-KTXjoMGsBjMeDL3df_iQoWWzM_OyeE4Zs6mWnLxXM38onK4cTm7zlkAa8o2NTe97T0pYIPozplmCFi5w1RdcZo401&amp;t=635201406466652144" width="0" height="0" style="border-width:0px;" /></a><table id="ctl00_mHeader_Menubar_menu" class="menubar groupmenu ctl00_mHeader_Menubar_menu_5 ctl00_mHeader_Menubar_menu_2" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun0"><table class="groupmenu ctl00_mHeader_Menubar_menu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;"><a class="ctl00_mHeader_Menubar_menu_1 groupmenu ctl00_mHeader_Menubar_menu_3" href="../AlternateMenu.aspx?id=5" style="border-style:none;font-size:1em;">Applications</a></td>
+				</tr>
+			</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun1"><table class="groupmenu ctl00_mHeader_Menubar_menu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;"><a class="ctl00_mHeader_Menubar_menu_1 groupmenu ctl00_mHeader_Menubar_menu_3" href="../AlternateMenu.aspx?id=6" style="border-style:none;font-size:1em;">Certificates</a></td>
+				</tr>
+			</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun2"><table class="groupmenu ctl00_mHeader_Menubar_menu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;"><a class="ctl00_mHeader_Menubar_menu_1 groupmenu ctl00_mHeader_Menubar_menu_3" href="../AlternateMenu.aspx?id=15" style="border-style:none;font-size:1em;">Payments</a></td>
+				</tr>
+			</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun3"><table class="groupmenu ctl00_mHeader_Menubar_menu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;"><a class="ctl00_mHeader_Menubar_menu_1 groupmenu ctl00_mHeader_Menubar_menu_3" href="../AlternateMenu.aspx?id=4" style="border-style:none;font-size:1em;">Other</a></td>
+				</tr>
+			</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun4"><table class="groupmenu ctl00_mHeader_Menubar_menu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;"><a class="ctl00_mHeader_Menubar_menu_1 groupmenu ctl00_mHeader_Menubar_menu_3" href="../AlternateMenu.aspx?id=22" style="border-style:none;font-size:1em;">General Enquiry</a></td>
+				</tr>
+			</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun5"><table class="groupmenu ctl00_mHeader_Menubar_menu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;"><a class="ctl00_mHeader_Menubar_menu_1 groupmenu ctl00_mHeader_Menubar_menu_3" href="/ePathway/Production/Web/default.aspx" style="border-style:none;font-size:1em;">Home</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div id="ctl00_mHeader_Menubar_menun0Items" class="ctl00_mHeader_Menubar_menu_0 submenu ctl00_mHeader_Menubar_menu_8">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun6">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Applications/NewApplication.aspx" style="border-style:none;font-size:1em;">Lodge New Application</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun7">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Applications/EditApplication.aspx" style="border-style:none;font-size:1em;">Complete Lodgement Process</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun8">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Applications/ApplicationEnquiry.aspx" style="border-style:none;font-size:1em;">Application Enquiry</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun9">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Applications/FeeEnquiryTypes.aspx" style="border-style:none;font-size:1em;">Application Fee Enquiry</a></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun0ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=HcUVj2IJB-oyXYrAFLt54ulbR4ENx87jmY9kdBj4I4KL346xdWFjq5XTnJvDR93FPdyuDp1STd4NvFZWH_JwdH0x2FV5ipK8wZmIuLwfX901&amp;t=635201406466652144" alt="Scroll up" />
+		</div><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun0ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=ViKBADrsyKVey0ITtJelgaG7IKh4QO_1BC8vfsFMRk8U_rybnvkJ5chQlKnkKyVi3CtyMbD2ZwZRuQi2sDwH1lRk4HVL8K9D644m54oT9nY1&amp;t=635201406466652144" alt="Scroll down" />
+		</div>
+	</div><div id="ctl00_mHeader_Menubar_menun1Items" class="ctl00_mHeader_Menubar_menu_0 submenu ctl00_mHeader_Menubar_menu_8">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun10">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Certificates/NewCertificate.aspx" style="border-style:none;font-size:1em;">New Certificate</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun11">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Certificates/EditCertificate.aspx" style="border-style:none;font-size:1em;">Edit Certificate</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun12">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Certificates/CertificateEnquiry.aspx" style="border-style:none;font-size:1em;">Certificate Enquiry</a></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun1ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=HcUVj2IJB-oyXYrAFLt54ulbR4ENx87jmY9kdBj4I4KL346xdWFjq5XTnJvDR93FPdyuDp1STd4NvFZWH_JwdH0x2FV5ipK8wZmIuLwfX901&amp;t=635201406466652144" alt="Scroll up" />
+		</div><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun1ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=ViKBADrsyKVey0ITtJelgaG7IKh4QO_1BC8vfsFMRk8U_rybnvkJ5chQlKnkKyVi3CtyMbD2ZwZRuQi2sDwH1lRk4HVL8K9D644m54oT9nY1&amp;t=635201406466652144" alt="Scroll down" />
+		</div>
+	</div><div id="ctl00_mHeader_Menubar_menun2Items" class="ctl00_mHeader_Menubar_menu_0 submenu ctl00_mHeader_Menubar_menu_8">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun13">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Payments/PaymentTypes.aspx" style="border-style:none;font-size:1em;">New Payment</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun14">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/Payments/EditSubmit.aspx" style="border-style:none;font-size:1em;">Edit Payment</a></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun2ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=HcUVj2IJB-oyXYrAFLt54ulbR4ENx87jmY9kdBj4I4KL346xdWFjq5XTnJvDR93FPdyuDp1STd4NvFZWH_JwdH0x2FV5ipK8wZmIuLwfX901&amp;t=635201406466652144" alt="Scroll up" />
+		</div><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun2ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=ViKBADrsyKVey0ITtJelgaG7IKh4QO_1BC8vfsFMRk8U_rybnvkJ5chQlKnkKyVi3CtyMbD2ZwZRuQi2sDwH1lRk4HVL8K9D644m54oT9nY1&amp;t=635201406466652144" alt="Scroll down" />
+		</div>
+	</div><div id="ctl00_mHeader_Menubar_menun3Items" class="ctl00_mHeader_Menubar_menu_0 submenu ctl00_mHeader_Menubar_menu_8">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun15">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/help/help.aspx?page=EnquirySummaryView.aspx" target="_blank" style="border-style:none;font-size:1em;">Help</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun16">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="../Other/Contact.aspx" target="_blank" style="border-style:none;font-size:1em;">Contact Us</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun17">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/default.aspx" style="border-style:none;font-size:1em;">Home</a></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun3ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=HcUVj2IJB-oyXYrAFLt54ulbR4ENx87jmY9kdBj4I4KL346xdWFjq5XTnJvDR93FPdyuDp1STd4NvFZWH_JwdH0x2FV5ipK8wZmIuLwfX901&amp;t=635201406466652144" alt="Scroll up" />
+		</div><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun3ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=ViKBADrsyKVey0ITtJelgaG7IKh4QO_1BC8vfsFMRk8U_rybnvkJ5chQlKnkKyVi3CtyMbD2ZwZRuQi2sDwH1lRk4HVL8K9D644m54oT9nY1&amp;t=635201406466652144" alt="Scroll down" />
+		</div>
+	</div><div id="ctl00_mHeader_Menubar_menun4Items" class="ctl00_mHeader_Menubar_menu_0 submenu ctl00_mHeader_Menubar_menu_8">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun18">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx" style="border-style:none;font-size:1em;">Enquiry Lists</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun19">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx?ModuleCode=LAP" style="border-style:none;font-size:1em;">Application Enquiry</a></td>
+					</tr>
+				</table></td>
+			</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mHeader_Menubar_menun20">
+				<td><table class="submenuitem ctl00_mHeader_Menubar_menu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="white-space:nowrap;width:100%;"><a class="ctl00_mHeader_Menubar_menu_1 submenuitem ctl00_mHeader_Menubar_menu_6" href="/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx?ModuleCode=LPA" style="border-style:none;font-size:1em;">Property Enquiry</a></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun4ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=HcUVj2IJB-oyXYrAFLt54ulbR4ENx87jmY9kdBj4I4KL346xdWFjq5XTnJvDR93FPdyuDp1STd4NvFZWH_JwdH0x2FV5ipK8wZmIuLwfX901&amp;t=635201406466652144" alt="Scroll up" />
+		</div><div class="submenuitem ctl00_mHeader_Menubar_menu_7 ctl00_mHeader_Menubar_menu_0" id="ctl00_mHeader_Menubar_menun4ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+			<img src="/ePathway/Production/Web/WebResource.axd?d=ViKBADrsyKVey0ITtJelgaG7IKh4QO_1BC8vfsFMRk8U_rybnvkJ5chQlKnkKyVi3CtyMbD2ZwZRuQi2sDwH1lRk4HVL8K9D644m54oT9nY1&amp;t=635201406466652144" alt="Scroll down" />
+		</div>
+	</div><a id="ctl00_mHeader_Menubar_menu_SkipLink"></a>
+    
+
+</div>
+
+    
+
+<div id="ctl00_mHeader_Menubar_mobileMenuPanel" class="mobile-controls">
+	
+    
+    <div id="ctl00_mHeader_Menubar_mobileMenuButton" class="nav-mobile-button" onclick="javascript: { if (document.getElementById(&#39;mobileMenu&#39;).className === &#39;mobileMenu&#39;) document.getElementById(&#39;mobileMenu&#39;).className = &#39;mobileMenu hidden&#39;; else document.getElementById(&#39;mobileMenu&#39;).className = &#39;mobileMenu&#39;;  }">
+
+	</div>
+
+    
+            <div id="mobileMenu" class="mobileMenu hidden">
+                <ul>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl01_mobileLink" href="../AlternateMenu.aspx?id=5">Applications</a> 
+                
+                
+           <!-- </li> -->
+            
+        
+            
+            
+            <ul>
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl02_mobileLink" href="/ePathway/Production/Web/Applications/NewApplication.aspx">Lodge New Application</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl03_mobileLink" href="/ePathway/Production/Web/Applications/EditApplication.aspx">Complete Lodgement Process</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl04_mobileLink" href="/ePathway/Production/Web/Applications/ApplicationEnquiry.aspx">Application Enquiry</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl05_mobileLink" href="/ePathway/Production/Web/Applications/FeeEnquiryTypes.aspx">Application Fee Enquiry</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            </ul>
+            </li>
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl06_mobileLink" href="../AlternateMenu.aspx?id=6">Certificates</a> 
+                
+                
+           <!-- </li> -->
+            
+        
+            
+            
+            <ul>
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl07_mobileLink" href="/ePathway/Production/Web/Certificates/NewCertificate.aspx">New Certificate</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl08_mobileLink" href="/ePathway/Production/Web/Certificates/EditCertificate.aspx">Edit Certificate</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl09_mobileLink" href="/ePathway/Production/Web/Certificates/CertificateEnquiry.aspx">Certificate Enquiry</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            </ul>
+            </li>
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl10_mobileLink" href="../AlternateMenu.aspx?id=15">Payments</a> 
+                
+                
+           <!-- </li> -->
+            
+        
+            
+            
+            <ul>
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl11_mobileLink" href="/ePathway/Production/Web/Payments/PaymentTypes.aspx">New Payment</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl12_mobileLink" href="/ePathway/Production/Web/Payments/EditSubmit.aspx">Edit Payment</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            </ul>
+            </li>
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl13_mobileLink" href="../AlternateMenu.aspx?id=4">Other</a> 
+                
+                
+           <!-- </li> -->
+            
+        
+            
+            
+            <ul>
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl14_mobileLink" href="/ePathway/Production/Web/help/help.aspx?page=EnquirySummaryView.aspx">Help</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl15_mobileLink" href="../Other/Contact.aspx">Contact Us</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl16_mobileLink" href="/ePathway/Production/Web/default.aspx">Home</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            </ul>
+            </li>
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl17_mobileLink" href="../AlternateMenu.aspx?id=22">General Enquiry</a> 
+                
+                
+           <!-- </li> -->
+            
+        
+            
+            
+            <ul>
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl18_mobileLink" href="/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx">Enquiry Lists</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl19_mobileLink" href="/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx?ModuleCode=LAP">Application Enquiry</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl20_mobileLink" href="/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx?ModuleCode=LPA">Property Enquiry</a> 
+                
+                
+           <!-- </li> -->
+            </li>
+        
+            
+            
+            
+            <li>
+                
+                <a id="ctl00_mHeader_Menubar_mobileMenu_ctl21_mobileLink" href="/ePathway/Production/Web/default.aspx">Home</a> 
+                
+                
+           <!-- </li> -->
+            
+        
+                </ul> <!-- last second closing tag, as it cannot be written out form .cs-->
+                </li>
+                </ul>
+            </div>     
+        
+
+
+</div>
+
+    
+</div>
+
+<script type="text/javascript">
+    // Enable mobile menu
+
+</script>
+<!-- End Header -->
+
+                    
+                 </div>
+                <div class="mainBodyContent">
+                    
+    <table border="0">
+	<tr>
+		<td><span class="ContentHeading"></span><span class="ContentText"></span></td>
+	</tr><tr>
+		<td><table border="0">
+			<tr>
+				<td class="imagePreviousStage"></td><td class="imageNextStage"><input type="image" name="ctl00$MainBodyContent$ctl05" src="/ePathway/Production/Web/Images/stage-next.gif" style="border-width:0px;" /></td><td class="imageCancelStage"><input type="image" name="ctl00$MainBodyContent$CancelImageButton" id="ctl00_MainBodyContent_CancelImageButton" src="/ePathway/Production/Web/Images/stage-cancel.gif" style="border-width:0px;" /></td><td><ul id="mBreadcrumbs"><li><a class="current"></a></li><li><a class="current"></a></li><li><a class="current"></a></li><li><a></a></li></ul></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+    <div class="content">
+        <div id="ctl00_MainBodyContent_mImageContentPanel" class="GroupContentPanel">
+	<fieldset>
+		<legend>
+			Development Applications
+		</legend><table class="ContentPanelHeading" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+			<tr>
+				<td></td>
+			</tr>
+		</table><div class="contentPanel"><div class="contentPanelImage imagegeneralenquiries-enquirylists"><img src="/ePathway/Production/Web/Images/generalenquiries-enquirylists.gif" alt="Missing generalenquiries-enquirylists image" style="border-width:0px;" /></div><span class="ContentText">Listed below are the results for the enquiry that you requested. If available, you can click on the first column to display the details for that entry.</span></div>
+        
+	</fieldset>
+</div>
+        
+        <div id="ctl00_MainBodyContent_group_26" class="GroupContentPanel">
+	<fieldset>
+		<legend>
+			Application Details
+		</legend><table class="AlternateContentPanelHeading" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+			<tr>
+				<td></td>
+			</tr>
+		</table><div class="contentPanel"><span class="AlternateContentText"></span></div>
+        <table border="0" style="width:100%;">
+			<tr>
+				<td align="center" style="width:100%;"><table class="ContentPanel" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+					<tr class="ContentPanelHeading">
+						<th align="left" scope="col" style="width:150px;"><a href="EnquirySummaryView.aspx?SortFieldNumber=0&amp;SortDirection=Ascending">Application Number</a></th><th align="left" scope="col" style="width:80px;"><a href="EnquirySummaryView.aspx?SortFieldNumber=1&amp;SortDirection=Ascending">Date</a></th><th align="left" scope="col" style="width:200px;"><a href="EnquirySummaryView.aspx?SortFieldNumber=2&amp;SortDirection=Ascending">Application Description</a></th><th align="left" scope="col" style="width:300px;">Property Address</th><th align="left" scope="col" style="width:200px;"><a href="EnquirySummaryView.aspx?SortFieldNumber=4&amp;SortDirection=Ascending">Status</a></th>
+					</tr><tr class="ContentPanel">
+						<td align="left" valign="top" style="width:150px;"><a class="ContentText" href="EnquiryDetailView.aspx?Id=1099582">1075/2019/KA</a></td><td align="left" valign="top" style="width:80px;white-space:nowrap;"><span class="ContentText">29/11/2018</span></td><td align="left" valign="top" style="width:200px;"><span class="ContentText">A Metal Shed</span></td><td align="left" valign="top" style="width:300px;"><span class="ContentText">578 Sackville Ferry Road, SACKVILLE NORTH  NSW  2756</span></td><td align="left" valign="top" style="width:200px;white-space:nowrap;"><div class='ContentText' style='width: 200px; text-overflow: ellipsis; overflow:hidden;'>Lodged</div></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+        
+
+        <div id="ctl00_MainBodyContent_mPagingControl_Panel1">
+	
+    <table id="ctl00_MainBodyContent_mPagingControl_pagerTable" class="paging" align="Center" border="0">
+		<tr id="ctl00_MainBodyContent_mPagingControl_TableRow1" valign="middle">
+			<td id="ctl00_MainBodyContent_mPagingControl_TableCell1" align="center" colspan="3" style="width:100%;"><span id="ctl00_MainBodyContent_mPagingControl_pageNumberLabel">Page 21 of 19</span></td>
+		</tr><tr id="ctl00_MainBodyContent_mPagingControl_TableRow2" valign="middle">
+			<td id="ctl00_MainBodyContent_mPagingControl_TableCell2" align="right">&nbsp;
+                <input type="image" name="ctl00$MainBodyContent$mPagingControl$firstPageHyperLink" id="ctl00_MainBodyContent_mPagingControl_firstPageHyperLink" title="First page 1 - 30" src="../images/firstPage.jpg" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainBodyContent$mPagingControl$firstPageHyperLink&quot;, &quot;&quot;, false, &quot;&quot;, &quot;EnquirySummaryView.aspx?PageNumber=1&quot;, false, false))" style="border-width:0px;" /><input type="image" name="ctl00$MainBodyContent$mPagingControl$previousPageHyperLink" id="ctl00_MainBodyContent_mPagingControl_previousPageHyperLink" title="Previous page 571 - 600" src="../images/previousPage.jpg" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainBodyContent$mPagingControl$previousPageHyperLink&quot;, &quot;&quot;, false, &quot;&quot;, &quot;EnquirySummaryView.aspx?PageNumber=20&quot;, false, false))" style="border-width:0px;" /></td><td id="ctl00_MainBodyContent_mPagingControl_TableCell4"></td><td id="ctl00_MainBodyContent_mPagingControl_TableCell5" align="left" valign="middle"></td>
+		</tr>
+	</table>
+
+</div>
+
+
+        <div class="bottomButtonBar">
+            <input type="submit" name="ctl00$MainBodyContent$mSearchButton" value="New Search" id="ctl00_MainBodyContent_mSearchButton" class="Button goButton" />
+        </div>
+        
+    </div>
+
+                </div>  
+        
+                <div class="mainBodyFooter">    
+                    <script>
+
+$(document).ready(function(){
+  var headerLinks = $("div.HeaderLinks > ul > li > a.HeaderLink:contains('Sign Out')");
+  if(headerLinks.length){
+   $("body").addClass("authenticated");
+  
+  }
+});
+</script>
+
+                    
+<!-- Footer -->
+<div align="center">
+    <div class="Footer"> 
+        
+        
+    </div>
+</div>
+<!-- End Footer -->
+
+                </div>
+            </div>
+            <label for="ctl00_mWidth" id="ctl00_dummy01" style="display:none;">dummy</label>
+            <input name="ctl00$mWidth" type="text" id="ctl00_mWidth" class="mWidth" style="display:none;" />
+            <label for="ctl00_mHeight" id="ctl00_dummy02" style="display:none;">dummy</label>
+            <input name="ctl00$mHeight" type="text" id="ctl00_mHeight" class="mHeight" style="display:none;" />
+            <script type="text/javascript">
+                /*function doNothing() {
+
+                }
+                $("#ctl00_mHeader_Menubar_menu td").each(function () {
+                    $(this)
+                        .attr("onblur", "doNothing()")
+                        .attr("onfocus", "doNothing()");
+                });*/
+                $(document).ready(function () {
+                    setDimension();
+                   
+                    
+                });
+
+                $(window).bind('orientationchange resize', function (event) {
+                    setDimension();
+                });
+
+                function setDimension() {
+                    var mWidth = document.getElementsByClassName("mWidth")[0];
+                    var mHeight = document.getElementsByClassName("mHeight")[0];
+
+                    mWidth.value = $(window).width();
+                    mHeight.value = $(window).height();
+                }
+            </script>
+        
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_mHeader_Menubar_menu_Data = new Object();
+ctl00_mHeader_Menubar_menu_Data.disappearAfter = 500;
+ctl00_mHeader_Menubar_menu_Data.horizontalOffset = 0;
+ctl00_mHeader_Menubar_menu_Data.verticalOffset = 0;
+ctl00_mHeader_Menubar_menu_Data.hoverClass = 'ctl00_mHeader_Menubar_menu_14 submenuhover';
+ctl00_mHeader_Menubar_menu_Data.hoverHyperLinkClass = 'ctl00_mHeader_Menubar_menu_13 submenuhover';
+ctl00_mHeader_Menubar_menu_Data.staticHoverClass = 'ctl00_mHeader_Menubar_menu_12 groupmenuhover';
+ctl00_mHeader_Menubar_menu_Data.staticHoverHyperLinkClass = 'ctl00_mHeader_Menubar_menu_11 groupmenuhover';
+ctl00_mHeader_Menubar_menu_Data.iframeUrl = '/ePathway/Production/Web/WebResource.axd?d=zBwdi2O0YGTiNd1muJ8tk45OxUM7y8hjaFO9w38btjKM-CyZZQvo2Gm6g1D41ofo5ghcMyV2MOiOuTfoLmAinbbuVCNt4V3ZWzPc8jpNvqM1&t=635201406466652144';
+//]]>
+</script>
+</form>
+        <script type="text/javascript" src='/ePathway/Production/Web/Scripts/CommonFooter.js'></script>
+        <script type="text/javascript" src='/ePathway/Production/Web/Scripts/common.js'></script>
+        
+        
+        <div id="loadingContainer"></div>
+        
+        <script type="text/javascript">document.getElementById("loadingContainer").innerHTML = "<div id='inforLoading' style='position: fixed; text-align: center; height: 100%; width: 100%; top: 0; right: 0; left: 0;'><div class='inforBusyIndicatorContainer'><div id='inforLoadingOverlay' class='inforBusyIndicator large pill'><span class='loadingText'>Loading...</span></div></div><div id='inforOverlay' class='inforOverlay' ></div></div>";</script>        
+        
+        
+
+        
+
+    </body>
+
+
+
+</html>
+
