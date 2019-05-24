@@ -27,11 +27,11 @@ class CronTask extends \Phalcon\Cli\Task {
         foreach ($taskFiles as $taskFile) {
 
             $taskName = explode(".", $taskFile)[0];
-            //if($taskName == 'MarrickvilleTask'){
+            if($taskName == 'BlacktownTask'){
                 $task = new $taskName();
                 $task->initialize();
                 $this->logger->info('-------------INITIALIZE '.$taskName.'-----------------');
-           // }
+            }
         }
 
         $file = fopen("CRONLOCK", "w");
@@ -44,10 +44,10 @@ class CronTask extends \Phalcon\Cli\Task {
                     . " ORDER BY RAND()"
                     . " LIMIT 1";
 
-//            $sql = "SELECT * FROM `councils`"
-//                    . " WHERE `id` = 33
-//                     ORDER BY RAND()"
-//                    . " LIMIT 1";
+            $sql = "SELECT * FROM `councils`"
+                    . " WHERE `id` = 3
+                     ORDER BY RAND()"
+                    . " LIMIT 1";
 
             $councilModel = new Councils();
             $council = new Resultset(null, $councilModel, $councilModel->getReadConnection()->query($sql));

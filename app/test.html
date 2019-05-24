@@ -1,1 +1,552 @@
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <html xmlns="http://www.w3.org/1999/xhtml" >  <head id="ctl00_Head1"><title>  	Find an Application  </title><meta http-equiv="Expires" content="0" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link href="../../favicon.ico" type="image/x-icon" rel="icon" /><link href="../../favicon.ico" type="image/x-icon" rel="shortcut icon" /><link href="../../HttpCombiner.ashx?s=IconCss&amp;t=text/css" type="text/css" rel="Stylesheet" media="all" />  	<base target="_top" />  	  	<!-- Conditional Queries to load the Formatted Lists CSS files -->        <!--[if lt IE 8]>          <link type="text/css" href="../../App_Themes/Icon/IE7.css" rel="Stylesheet" />      <![endif]-->        <!--[if gt IE 7]>  	    <link type="text/css" href="../../App_Themes/Icon/FormattedLists.css" rel="Stylesheet" />      <![endif]-->        <!--[if !IE]><!-->  	    <link type="text/css" href="../../App_Themes/Icon/FormattedLists.css" rel="Stylesheet" />      <!--<![endif]-->  	  	<style type='text/css'></style><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><link href="../../App_Themes/Default/Default.css" type="text/css" rel="stylesheet" /><link href="../../App_Themes/Default/User.css" type="text/css" rel="stylesheet" /></head>  <body>      <form method="post" action="./SearchApplication.aspx?id=585429" id="aspnetForm" role="form" autocomplete="off">  <div class="aspNetHidden">  <input type="hidden" name="ctl00_rcss_TSSM" id="ctl00_rcss_TSSM" value="" />  <input type="hidden" name="ctl00_script_TSM" id="ctl00_script_TSM" value="" />  <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />  <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />  <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODA5OTQyNDA0D2QWAmYPZBYCAgMPZBYGAgQPFgIeBFRleHQFHDxoMz5TZWFyY2ggQXBwbGljYXRpb25zPC9oMz5kAgYPZBYCAgEPZBYCAgIPFgIfAGVkAggPZBYEAgEPDxYCHgdWaXNpYmxlaGQWBAIBD2QWCGYPZBYCAgEPDxYEHgVXaWR0aBsAAAAAADCBQAEAAAAeBF8hU0ICgAJkZAIBD2QWCgIKD2QWAgICDxBkZBYAZAIMD2QWAgICDxBkZBYBZmQCDg9kFgQCAg9kFgRmDzwrAAgAZAICDzwrAA0BAA8WBAULU3BlY2lhbERheXMPBZIBVGVsZXJpay5XZWIuVUkuQ2FsZW5kYXIuQ29sbGVjdGlvbnMuQ2FsZW5kYXJEYXlDb2xsZWN0aW9uLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDE1LjEuNDAxLjQwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwABFgQFCUl0ZW1TdHlsZQ8Fd1N5c3RlbS5XZWIuVUkuV2ViQ29udHJvbHMuVGFibGVJdGVtU3R5bGUsIFN5c3RlbS5XZWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iMDNmNWY3ZjExZDUwYTNhFggeCUJhY2tDb2xvcgqmAR4LQm9yZGVyU3R5bGULKiVTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkJvcmRlclN0eWxlBB4LQm9yZGVyQ29sb3IKRB8DAlgFAUMGALBjdHTY1ogFD1JlbmRlckludmlzaWJsZWdkZAIED2QWBGYPPCsACABkAgIPPCsADQEADxYEBQtTcGVjaWFsRGF5cw8FkgFUZWxlcmlrLldlYi5VSS5DYWxlbmRhci5Db2xsZWN0aW9ucy5DYWxlbmRhckRheUNvbGxlY3Rpb24sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTUuMS40MDEuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBQrAAEWBAUJSXRlbVN0eWxlDwV3U3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5UYWJsZUl0ZW1TdHlsZSwgU3lzdGVtLldlYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EWCB8ECqYBHwULKwQEHwYKRB8DAlgFAUMGALBjdHTY1ogFD1JlbmRlckludmlzaWJsZWdkZAIQD2QWAgICDxBkZBYAZAISD2QWAgICDxBkZBYAZAICDxYCHwBlZAIFD2QWAmYPDxYEHghDc3NDbGFzc2UfAwICZBYEAgEPDxYCHwFoZBYCAgMPDxYCHwBlZGQCAw8PFgQfB2UfAwICZBYEAgMPZBYCZg8WAh8ABfcHPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cDovL21hcHMuZ29vZ2xlLmNvbS9tYXBzL2FwaS9qcz9zZW5zb3I9dHJ1ZSZsaWJyYXJpZXM9Z2VvbWV0cnkiPjwvc2NyaXB0PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vanNhcGkiPjwvc2NyaXB0PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii9jbGllbnQvc2NyaXB0cy9tYXAvL2ljb24tbWFwLmpzIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIuLi8uLi9QYWdlcy9YQy5TcGF0aWFsL0phdmFzY3JpcHQvU3BhdGlhbC5qcyI+PC9zY3JpcHQ+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvY2xpZW50L3NjcmlwdHMvbWFwLy9pY29uLW1hcC5jc3MiIG1lZGlhPSJzY3JlZW4iPjwvbGluaz48bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii4uLy4uL0FwcF9UaGVtZXMvSWNvbi9TcGF0aWFsLmNzcyIgbWVkaWE9InNjcmVlbiI+PC9saW5rPjxkaXYgaWQ9Im1hcCIgY2xhc3M9ImVtYmVkZGVkIiBzdHlsZT0iIj4gPC9kaXY+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQp2YXIgbWFwOyQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uICgpIHt2YXIgb3B0aW9ucyA9IHthY2NvdW50OiIiLGNvbnRleHQ6IiIsem9vbVRvQm91bmRzOiBmYWxzZSx0b29sYmFyOiB0cnVlLHRvb2xiYXJPcHRpb25zOiB7em9vbUluOiB0cnVlLHpvb21PdXQ6IHRydWUsc3RyZWV0VmlldzogdHJ1ZSxsYXllcnM6IGZhbHNlLGxlZ2VuZDogZmFsc2UsY2xlYXI6IGZhbHNlLHNlYXJjaDogZmFsc2V9LGlkZW50aWZ5OiBmYWxzZSxtdWx0aVNlbGVjdDogZmFsc2Usem9vbUZhY3RvcjogMTZ9Ow0KbWFwID0gbmV3IG1hY3JvZ2lzLm1hcHMuSWNvbk1hcCgibWFwIiwgb3B0aW9ucywgZnVuY3Rpb24oKSB7IG1hcC56b29tVG9GdWxsRXh0ZW50KCk7DQogDQp9KTt9KTsNCiQoJyMnKS5oaWRlKCk7DQo8L3NjcmlwdD4NCmQCBQ8WAh8AZWQCAw9kFgICAQ8PFgYfAhsAAAAAAECFQAEAAAAeBkhlaWdodBsAAAAAACB8QAEAAAAfAwKAA2RkAgMPZBYCAgEPDxYCHwFnZBYCZg9kFgICGQ9kFgJmD2QWBAIBD2QWBAIBDw8WAh8BaGRkAgMPDxYCHwAFA01hcGRkAgMPZBYGAgEPDxYIHwIbAAAAAAB4hEABAAAAHwgbAAAAAADgdUABAAAAHwMCgAMfAWdkZAIDD2QWAmYPFgIfAAX3BzxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHA6Ly9tYXBzLmdvb2dsZS5jb20vbWFwcy9hcGkvanM/c2Vuc29yPXRydWUmbGlicmFyaWVzPWdlb21ldHJ5Ij48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGUuY29tL2pzYXBpIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvY2xpZW50L3NjcmlwdHMvbWFwLy9pY29uLW1hcC5qcyI+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLi4vLi4vUGFnZXMvWEMuU3BhdGlhbC9KYXZhc2NyaXB0L1NwYXRpYWwuanMiPjwvc2NyaXB0PjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2NsaWVudC9zY3JpcHRzL21hcC8vaWNvbi1tYXAuY3NzIiBtZWRpYT0ic2NyZWVuIj48L2xpbms+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIuLi8uLi9BcHBfVGhlbWVzL0ljb24vU3BhdGlhbC5jc3MiIG1lZGlhPSJzY3JlZW4iPjwvbGluaz48ZGl2IGlkPSJtYXAiIGNsYXNzPSJlbWJlZGRlZCIgc3R5bGU9IiI+IDwvZGl2Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KdmFyIG1hcDskKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbiAoKSB7dmFyIG9wdGlvbnMgPSB7YWNjb3VudDoiIixjb250ZXh0OiIiLHpvb21Ub0JvdW5kczogZmFsc2UsdG9vbGJhcjogdHJ1ZSx0b29sYmFyT3B0aW9uczoge3pvb21JbjogdHJ1ZSx6b29tT3V0OiB0cnVlLHN0cmVldFZpZXc6IHRydWUsbGF5ZXJzOiBmYWxzZSxsZWdlbmQ6IGZhbHNlLGNsZWFyOiBmYWxzZSxzZWFyY2g6IGZhbHNlfSxpZGVudGlmeTogZmFsc2UsbXVsdGlTZWxlY3Q6IGZhbHNlLHpvb21GYWN0b3I6IDE2fTsNCm1hcCA9IG5ldyBtYWNyb2dpcy5tYXBzLkljb25NYXAoIm1hcCIsIG9wdGlvbnMsIGZ1bmN0aW9uKCkgeyBtYXAuem9vbVRvRnVsbEV4dGVudCgpOw0KIA0KfSk7fSk7DQokKCcjJykuaGlkZSgpOw0KPC9zY3JpcHQ+DQpkAgUPFgIfAGVkZHuKkvqvxzOt2ceKCHCzIW91HP/O" />  </div>    <script type="text/javascript">  //<![CDATA[  var theForm = document.forms['aspnetForm'];  if (!theForm) {      theForm = document.aspnetForm;  }  function __doPostBack(eventTarget, eventArgument) {      if (!theForm.onsubmit || (theForm.onsubmit() != false)) {          theForm.__EVENTTARGET.value = eventTarget;          theForm.__EVENTARGUMENT.value = eventArgument;          theForm.submit();      }  }  //]]>  </script>      <script src="/ApplicationTracking/WebResource.axd?d=4N6MEVMWUjFF5aBS2iuQ11cbTE1YQ-LcOIqHrdRhbBTDCNX7j6pZKBWGU4-9Dtq6456ResYY9vQtF2Puv0OjLkkbuGM1&amp;t=636765175280000000" type="text/javascript"></script>      <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>  <script src="/ApplicationTracking/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_script_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen%3ab7585254-495e-4311-9545-1f910247aca5%3aea597d4b%3ab25378d2%3bArtem.Google%2c+Version%3d6.1.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3dfc8d6190a3aeb01c%3aen%3a48d6dde7-c728-4b51-b8fe-a8d1514595bc%3a93793f06%3ac2eaa3fd" type="text/javascript"></script>  <script type="text/javascript">  //<![CDATA[  if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');  //]]>  </script>    <div class="aspNetHidden">    	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1268168F" />  	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAh2981ioqYigPxU5p19H/J1zCMkis3SK7HVPQcmRWAJniP1uBy+gxiVio7lvhNdb3txJ1KmQp5BGfTVutROVi8PXRkArfsTit0aqRerohsxB3z8w5gzQvQaBKeBV84zCu6BHHyfjJ7HQAGPkOwe+IR7DvkrnlAbSAYyGbxG35x1eB44OqAcq38EeafGcqWzHp4wS+Y7" />  </div>          <script type="text/javascript">  //<![CDATA[  Sys.WebForms.PageRequestManager._initialize('ctl00$script', 'aspnetForm', [], [], [], 90, 'ctl00');  //]]>  </script>            <script type="text/javascript" src="../../HttpCombiner.ashx?s=IconJs&t=text/javascript"></script>          <script type="text/javascript">              jGrowlPosition = "top-right";          //$(document).ready(function () {              try {              if (!(window.console)) console = { log: function () { } };              } catch (err) { }          //});            </script>          <div id="ctl00_throbber_throbber" class="globalThrobber">      <img class="throbber" src="../../Common/Common/Image.aspx?rid=throbber.gif" alt="Loading..." />  </div>    <script type="text/javascript">      $(document).ready(function(){                  $('.globalThrobber')              .ajaxStart(function() {                  if ($('.throbber:visible').length == 0) {                      $(this).show();                  }              })                .ajaxStop(function() {                  $(this).hide();              })          ;      });  </script>              <script type="text/javascript">      /*This script is designed to alert the user when session timout is reached and redirect to home page*/      var timer1;      window.clearTimeout(timer1);      var $dialog;      $(document).ready(function()      {          $dialog = $('<div></div>').html('Your session has expired, you will now be redirected to the home page.').dialog(          {              buttons:              {                     'Ok': function()                  {                      $(this).dialog('close');                      window.location = 'http://eservices.lmc.nsw.gov.au/ApplicationTracking/Pages/XC.Track/SearchApplication.aspx';                  }              },              show: "fade",              hide: "fade",              resizable: false,              modal: true,              autoOpen: false,              title:  'Session Expired'          });      });      var sessionTimeout = '10799000';      function doTimeout()      {          $dialog.dialog('open');          return false;      }      timer1 = window.setTimeout('doTimeout()',sessionTimeout);  </script>                    <div id="docf">              <div id="hd" role="banner">                     <div class="logo">                   <!--<a href="http://www.leichhardt.nsw.gov.au/Home/Home"><img alt="Leichhardt Council" src="http://www.leichhardt.nsw.gov.au/Images/UserUploadedImages/11/Leichhardt-Council-logo.png" style="padding-top:10px;padding-left:10px;"></a>-->                   </div>                  <div class="clear adminclear"></div>                   <div id="mainline">                      <div class="containerLeft adminbanner splitterLeftMaster noOverflow">                                                    <div style="margin-top:0px; padding:3px; padding-left:12px; color:#fff !important;" id="adminpage">                              <h3>Search Applications</h3>                          </div>                      </div>                      <div class="containerRight adminbanner splitterRightMaster noOverflow">                                                </div>                  </div>                  <div class="clear"></div>              </div>              <div class="clear"></div>               <div id="bd" role="main">                  <div id="main">                      <div class="containerLeft">                          <div class="containerInner">                              <div class="">                                        <div class="">          <div class="Links LinksGroup">    <div id="m0" class="LinksTitle" onclick="">Home</div>    <div id="i0" class="LinksSection">      <a href="http://www.leichhardt.nsw.gov.au" class="LinkItem" target="">Council Home</a>      <a href="../../Pages/XC.Track/SearchApplication.aspx" class="LinkItem" target="">Tracking Home</a>      <a href="../../Common/Common/Terms.aspx" class="LinkItem" target="">Disclaimer</a>    </div>  </div>  <div class="Links LinksGroup">    <div id="m5" class="LinksTitle" onclick="">Property</div>    <div id="i5" class="LinksSection">      <a href="../../Pages/XC.Track/SearchProperty.aspx" class="LinkItem" target="">Find a Property</a>    </div>  </div>  <div class="Links LinksGroup">    <div id="m10" class="LinksTitle" onclick="">Applications</div>    <div id="i10" class="LinksSection">      <a href="../../Pages/XC.Track/SearchApplication.aspx" class="LinkItem" target="">Find an Application</a>      <a href="../../Pages/XC.Track/Exhibition.aspx" class="LinkItem" target="">On Exhibition</a>    </div>  </div>  <div class="Links LinksGroup">    <div id="m21" class="LinksTitle" onclick="">Submitted</div>    <div id="i21" class="LinksSection">      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=thisweek&amp;k=LodgementDate&amp;t=161" class="LinkItem" target="">This Week</a>      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=lastweek&amp;k=LodgementDate&amp;t=161" class="LinkItem" target="">Last Week</a>      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=thismonth&amp;k=LodgementDate&amp;t=161" class="LinkItem" target="">This Month</a>      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=lastmonth&amp;k=LodgementDate&amp;t=161" class="LinkItem" target="">Last Month</a>    </div>  </div>  <div class="Links LinksGroup">    <div id="m22" class="LinksTitle" onclick="">Determined</div>    <div id="i22" class="LinksSection">      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=thisweek&amp;k=DeterminationDate&amp;t=161" class="LinkItem" target="">This Week</a>      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=lastweek&amp;k=DeterminationDate&amp;t=161" class="LinkItem" target="">Last Week</a>      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=thismonth&amp;k=DeterminationDate&amp;t=161" class="LinkItem" target="">This Month</a>      <a href="../../Pages/XC.Track/SearchApplication.aspx?d=lastmonth&amp;k=DeterminationDate&amp;t=161" class="LinkItem" target="">Last Month</a>    </div>  </div>  <script type="text/javascript">          if ($.cookie("menu_0")==null) {$.cookie("menu_0",'show',{expires:28,path:'/'});}          if ($.cookie("menu_0")=='hide') {$('#i0').hide();$('#g0').attr("src", "../../Image/bullet_arrow_right.aspx");}                  if ($.cookie("menu_5")==null) {$.cookie("menu_5",'show',{expires:28,path:'/'});}          if ($.cookie("menu_5")=='hide') {$('#i5').hide();$('#g5').attr("src", "../../Image/bullet_arrow_right.aspx");}                  if ($.cookie("menu_10")==null) {$.cookie("menu_10",'show',{expires:28,path:'/'});}          if ($.cookie("menu_10")=='hide') {$('#i10').hide();$('#g10').attr("src", "../../Image/bullet_arrow_right.aspx");}                  if ($.cookie("menu_21")==null) {$.cookie("menu_21",'show',{expires:28,path:'/'});}          if ($.cookie("menu_21")=='hide') {$('#i21').hide();$('#g21').attr("src", "../../Image/bullet_arrow_right.aspx");}                  if ($.cookie("menu_22")==null) {$.cookie("menu_22",'show',{expires:28,path:'/'});}          if ($.cookie("menu_22")=='hide') {$('#i22').hide();$('#g22').attr("src", "../../Image/bullet_arrow_right.aspx");}                function toggleMenu(id) {        if ($.cookie('menu_' + id)=='hide') {        $.cookie('menu_' + id,'show',{expires:28,path:'/'});        $('#i' + id).slideDown('slow');        $('#g' + id).attr("src", "../../Image/bullet_arrow_down.aspx");        } else {        $.cookie('menu_' + id,'hide',{expires:28,path:'/'});        $('#i' + id).slideUp('slow');        $('#g' + id).attr("src", "../../Image/bullet_arrow_right.aspx");        }        }         </script>     <div class="Links LinksGroup">      <div id="iSub" class="LinksSection">                </div>  </div>  <script type="text/javascript">      if ($.cookie("menu_Sub") == null) {          $.cookie("menu_Sub", 'hide', { expires: 28, path: '/' });      };      $(function () {          if ($.cookie("menu_Sub") === 'hide') {              $('#iSub').hide();              $('#gSub').attr("src", "../../Image/bullet_arrow_right.aspx");          };      })  </script>              </div>                                </div>                          </div>                      </div>                      <div class="containerRight">                          <div class="containerInner">                              <div class="">                                                                          <div class="">                    <div id="ctl00_ctMain_d1" class="shift">              <div id="ctl00_ctMain_info_pnlApplication" class="MainPanel">  	      <div>                <h2>CCP/2019/110 - Construction Certificate (Private Certifier)      </h2>                  <div style="float:right;background:transparent url(../../images/contact_us_background_iwc5.jpg) top left no-repeat;"><a style="color:white;line-height:26px:width:203px;padding:10px;" href="mailto:leichhardt@lmc.nsw.gov.au?subject=Application Enquiry: CCP/2019/110 - Construction Certificate (Private Certifier)      &amp;Body=" onfocus="this.blur()">Contact us about this</a></div>            <div class="detail" id="s_ctl00_ctMain_info_app" style="display:block;"><div class="detailleft" id="d_ctl00_ctMain_info_app">Application Details</div><div class="detailright" id="b_ctl00_ctMain_info_app">      <div style="padding-left:10px;">Construction Certificate (Private Certifier) Ground and first floor alterations and additions to existing residence, and associated works, including tree removal.<br />  		  Status:  		  <strong>Lodgement<br /></strong>  		  Submitted: 01/05/2019<br />  		  Estimated Cost of Work:  		  $ 0<br />  		  Officer:  		                  No officer recorded.        <br /></div>  </div><div style="clear:both;"> </div></div>                    <br/>          <div id="sTabs">              <div>                  <input type="submit" name="ctl00$ctMain$info$btnaddr" value="Location" onclick="showDetail(&#39;addr&#39;); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctMain$info$btnaddr&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctMain_info_btnaddr" class="buttonText buttonStandard" />                  <input type="submit" name="ctl00$ctMain$info$btnppl" value="People" onclick="showDetail(&#39;ppl&#39;); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctMain$info$btnppl&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctMain_info_btnppl" class="buttonText buttonStandard" />                  <input type="submit" name="ctl00$ctMain$info$btnevents" value="History" onclick="showDetail(&#39;events&#39;); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctMain$info$btnevents&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctMain_info_btnevents" class="buttonText buttonStandard" />                  <input type="submit" name="ctl00$ctMain$info$btnrelated" value="Related" onclick="showDetail(&#39;related&#39;); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctMain$info$btnrelated&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctMain_info_btnrelated" class="buttonText buttonStandard" />                  <input type="submit" name="ctl00$ctMain$info$btnedms" value="Documents" onclick="showDetail(&#39;edms&#39;); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctMain$info$btnedms&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctMain_info_btnedms" class="buttonText buttonStandard" />                  <input type="submit" name="ctl00$ctMain$info$btnAll" value="Show All" onclick="$(&#39;.isection&#39;).hide().slideDown(&#39;slow&#39;); showButton(&#39;All&#39;); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctMain$info$btnAll&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctMain_info_btnAll" class="buttonText buttonDelete" />              </div>          </div>                    <div id="addr" class="isection" style="display:block;">              <div class="detail" id="s_ctl00_ctMain_info_prop" style="display:block;"><div class="detailleft" id="d_ctl00_ctMain_info_prop">Location</div><div class="detailright" id="b_ctl00_ctMain_info_prop"><div style="padding-left:10px;">    <a href="../XC.Track/SearchProperty.aspx?id=230285" title="Click to display property details">4 North Avenue LEICHHARDT  NSW  2040                                                                  </a> <br /></div></div><div style="clear:both;"> </div></div>                               <!--<div class="detail" id="s_ctl00_ctMain_info_mapsubhead" style="display:block;"><div class="detailleft" id="d_ctl00_ctMain_info_mapsubhead">Map</div><div class="detailright" id="b_ctl00_ctMain_info_mapsubhead"></div><div style="clear:both;"> </div></div> NOT REQUIRED FIXED BY ADDING CSSCLASS TO 'lbl' IN MapXId.ascx-->              <div id="ctl00_ctMain_info_map_pnl" class="detail">  		      <div id="ctl00_ctMain_info_map_pnl0" class="detailleft" onclick="javascript:jqSH();" style="cursor:pointer;cursor:hand">  			                    <span id="ctl00_ctMain_info_map_lbl" class="detailleft">Map</span>        		</div>      <div id="ctl00_ctMain_info_map_pnl1" class="detailright">  			          <div id="ctl00_ctMain_info_map_gmap" defaultmapview="Normal" zoompantype="Small" isstreetview="false" enabledragging="true" enablecontinuouszoom="true" showscalecontrol="false" showmaptypecontrol="false" style="background-color:Gray;height:350px;width:655px;">  				<span id="ctl00_ctMain_info_map_gmap_GoogleMarkers"></span>  			</div>                      <div id="features"> </div>          <div style="clear:both;"> </div>                    <script type="text/javascript">              $(function () {                  $("#identify-panel .mm-content").hide();                  $("#identify-panel .mm-footer").hide();                  $("#identify-panel .mm-header h2").html("Links");                  $("#identify-panel .ui-resizable-handle").hide();                  $("#identify-panel").css("top", "5px").css("width", "200px").css("opacity", "0.7").css("height", "70px").append("<div id='links' style='margin:2px; padding-left:7px;'></div>");                  $("#legend-panel .mm-content").hide();                  $("#legend-panel .mm-footer").hide();                  $("#legend-panel .ui-resizable-handle").hide();                  $("#legend-panel").css("width", "220px").css("opacity", "0.7").css("height", "440px").append("<div id='legn' style='margin:2px; overflow-y:auto; overflow-x:hidden; padding-left:8px; height:400px;'></div>");              });          </script>        		</div>      <div style="clear:both;"> </div>    	</div>    <script type="text/javascript">      $('#ctl00_ctMain_info_map_map').width('100%');      $('#ctl00_ctMain_info_map_gmap').width('100%');      $('#features').width($('#map').width());            function jqSH() {          jqShowHide("#ctl00_ctMain_info_map_pnl1","#i_map");      }  </script>                </div>                    <div id="ppl" class="isection" style="display:block;">              <div class="detail" id="s_ctl00_ctMain_info_party" style="display:block;"><div class="detailleft" id="d_ctl00_ctMain_info_party">People</div><div class="detailright" id="b_ctl00_ctMain_info_party"><div style="padding-left:10px;">Applicant                                          - Mr G C George<br />  </div></div><div style="clear:both;"> </div></div>          </div>                    <div id="events" class="isection" style="display:block;">              <div class="detail" id="s_ctl00_ctMain_info_history" style="display:block;"><div class="detailleft" id="d_ctl00_ctMain_info_history">History</div><div class="detailright" id="b_ctl00_ctMain_info_history"><div style="padding-left:10px;">        There are no events on this application.      </div></div><div style="clear:both;"> </div></div>          </div>            <div id="related" class="isection" style="display:block;">              <div class="detail" id="s_ctl00_ctMain_info_relatedapps" style="display:block;"><div class="detailleft" id="d_ctl00_ctMain_info_relatedapps">Related Applications</div><div class="detailright" id="b_ctl00_ctMain_info_relatedapps"><div style="margin-left:10px;">    <table style="width:100%">      <tr>        <td style="border-bottom:solid 1px #BBB; width:15%;">          <strong>  								App. No.  							</strong>        </td>        <td style="border-bottom:solid 1px #BBB;width:75%;">          <strong>  								Description  							</strong>        </td>        <td style="border-bottom:solid 1px #BBB;text-align:right;">          <strong>  								Submitted  							</strong>        </td>      </tr>      <tr>        <td>          <a href="SearchApplication.aspx?id=544127"> D/2017/641</a>        </td>        <td>Ground and first floor alterations and additions to existing residence, and associated works, inclu...  									</td>        <td style="text-align:right;">07/12/2017</td>      </tr>      <tr>        <td colspan="4" style="height:1px;background-color:#DDD;" />      </tr>    </table>  </div></div><div style="clear:both;"> </div></div>          </div>                    <div id="edms" class="isection" style="display:block;">  	    <!-- I have commented this out and put the heading in the DocumentInfoConnect.ascx page, this puts extra whitespace between heading and documents -->              <!--<div class="detail" id="s_ctl00_ctMain_info_docs" style="display:block;"><div class="detailleft" id="d_ctl00_ctMain_info_docs">Documents</div><div class="detailright" id="b_ctl00_ctMain_info_docs"></div><div style="clear:both;"> </div></div>-->                <div class="detail" id="s_ctl00_ctMain_info_docs" style="display: block;">      <div class="detailright" id="b_ctl00_ctMain_info_docs">          <!-- Add the heading document heading when documents use lazy load, remove documentHeading div if not using lazy load -->  	<div id="documentHeading" class="lmcSubHeadline">   	    Documents          </div>          <div id="documentContainer" style="max-height: 500px; overflow: auto;">              <div id="documentInner" style="padding-left: 10px;">                  <table id="documentsTable" style="width: 100%;">                      <tr>                          <td style="border-bottom: solid 1px #BBB;width:15%">                              <strong>Registered</strong>                          </td>                          <td style="border-bottom: solid 1px #BBB;" colspan="2">                              <strong>Description</strong>                          </td>                          <td style="border-bottom: solid 1px #BBB;text-align:right">                              <strong>Size</strong>                          </td>                      </tr>                  </table>              </div>              <div id="LoadingSpinner" style="text-align: center; padding-top: 5px; padding-bottom: 15px;                  cursor: pointer;">              </div>          </div>      </div>      <div style="clear: both;">      </div>  </div>  <input type="hidden" name="ctl00$ctMain$info$connectService$hiddenId" id="ctl00_ctMain_info_connectService_hiddenId" value="585429" />  <script type="text/javascript">      var pageIndex;      var pageSize = 50;      var loadingMoreContent = false;      var cId = $("#ctl00_ctMain_info_connectService_hiddenId").val();        $(document).ready(function () {          pageIndex = 0;          bindDocScrollEvent();          getMoreDocuments();      });        function debounce(fn) {          var delay = 150;          var timer = null;          return function () {              var context = this, args = arguments;              clearTimeout(timer);              timer = setTimeout(function () {                  fn.apply(context, args);              }, delay);          };      }        function bindDocScrollEvent() {          var offset = 20;          $("#documentContainer").unbind();          $("#documentContainer").scroll(debounce(function () {              var scrollPoint = $("#documentContainer").scrollTop() + $("#documentContainer").height();              var documentHeight = $("#documentInner").height();              if (scrollPoint >= (documentHeight - offset)) {                  getMoreDocuments();              }          }));      }        function getMoreDocuments() {          if (!loadingMoreContent) {              loadingMoreContent = true;              if (pageIndex != -1) {                  $("#LoadingSpinner").html('<img class="throbber" src="../../Common/Common/Image.aspx?rid=spinner-large.gif" alt="Loading..." />');                  $.ajax({                      type: "POST",                      url: 'Services/ECMConnectService.aspx/GetDocuments',                      data: '{"cId":"' + cId + '","PageIndex":"' + pageIndex + '","PageSize":"' + pageSize + '"}',                      contentType: "application/json; charset=utf-8",                      success: function (data) {                          data = data.d;                          $("#documentsTable").append(data);                          loadingMoreContent = false;                          if (data != "") {                              $("#LoadingSpinner").text("Load more documents");                              pageIndex += 1;                          } else {                              if (pageIndex == 0) {                                  $("#documentInner").html("No documents recorded.");                                  $("#LoadingSpinner").text("");                              } else {                                  $("#LoadingSpinner").text("No more documents to display");                              }                              pageIndex = -1;                          }                      },                      error: function (err) {                          $("#documentInner").html("No documents recorded.");                          commonError(err);                          loadingMoreContent = false;                      }                  });              }          }      }  </script>            </div>      </div>      <br /><br />      <script type="text/javascript">          var base = "ctl00_ctMain_info_";          function showDetail(d) {              $('.isection').hide();              $('#sTabs').show();              $('#' + d).slideDown('slow');              showButton(d);          }            function showButton(d) {              $('.buttonText').removeClass("buttonDelete").addClass("buttonStandard");              $('#' + base + 'btn' + d).removeClass(("buttonStandard")).addClass("buttonDelete");              //if (d != 'All') {              //    $('.detailleft').hide();              //} else {              //    $('.detailleft').show();              //};          }            //$('.detailleft').hide();          $('.detailleft').css('float', 'none').css('width','80%');          $('.detailleft').addClass('lmcSubHeadline');          $('.detail').css('margin-top', '20px');          $(".detail").css('border', 'none');          $("#sTabs").css('border-bottom', 'solid 1px #000000');          $(".acAll").show();      </script>    </div>               </div>      </div>                                    </div>                          </div>                      </div>                  </div>              </div>                              <div class="footer-lmc" style="margin-top:30px;">                  <!--                  <div id="footer-main">                                            <div id="footer-col1-inner1">                          <h3>Leichhardt Municipal Council</h3>                            <ul>                          <li>7-15 Wetherill Street</li>                            <li>Leichhardt NSW 2040</li>                          </ul>                            <ul>                          <li>Phone: (02) 9367 9222</li>                            <li>Fax: (02) 9367 9111</li>                          </ul>                      </div>                              <div id="footer-col1-inner2">                          <h3>Office hours </h3>                          <ul>                              <li>Monday to Friday                              </li>                              <li>(excluding Public Holidays)                              </li>                          </ul>                          <ul>                              <li>8.30 am until 5.15 pm                              </li>                          </ul>                      </div>                              <div id="footer-col1-inner3">                          <h3>Connect with us</h3>                          <ul>                              <li><a href="http://www.leichhardt.nsw.gov.au/About-Council/Contact-Us/Contact-Us">Contact Us</a>&nbsp; </li>                              <li><a href="http://www.leichhardt.nsw.gov.au/About-Council/Feedback/Feedback">Feedback</a>&nbsp; </li>                              <li></li>                              <li>Email:&nbsp;<br />                              <a href="mailto:leichhardt@lmc.nsw.gov.au">leichhardt@lmc.nsw.gov.au</a> </li>                          </ul>                          <a href="http://www.facebook.com/LeichhardtCouncil" title="Link to Leichhardt Council on Facebook" target="_blank"><img style="border: 0px solid;" title="facebook" alt="facebook" src="http://www.leichhardt.nsw.gov.au/Images/UserUploadedImages/11/icon-facebook.jpg"/></a><a href="https://twitter.com/leichhardtmc" title="Follow Leichhardt Council on Twitter" target="_blank"><img style="border: 0px solid;" title="twitter" alt="twitter" src="http://www.leichhardt.nsw.gov.au/Images/UserUploadedImages/11/icon-twitter.jpg"/></a><a href="http://www.youtube.com/lmccouncil" title="Watch Leichhardt Council's video's on You Tube" target="_blank"><img style="border: 0px solid;" title="youtube" alt="youtube" src="http://www.leichhardt.nsw.gov.au/Images/UserUploadedImages/11/icon-youtube.jpg"/></a> <a href="http://instagram.com/leichhardtmc" title="Link to Leichhardt Council on Instagram" target="_blank"><img style="border: 0px solid;" alt="Instagram logo" src="http://www.leichhardt.nsw.gov.au/Images/UserUploadedImages/11/instagram-hp.jpg"/></a>                      </div>                     </div>                  -->                  <div id="footer-bottom">                     <div id="footer-left-column">                      <a href="http://www.leichhardt.nsw.gov.au/Home/Home"><img style="border: 0px solid;" alt="arrow_down.png" src="../../Images/Misc/IWC-Temp-Logo-Rectangle-Transparent.png" width="150" height="65"/></a>                     </div>                     <div id="footer-right-column">                      © Copyright 2016. Inner West Council&nbsp; |&nbsp;<a href="http://www.leichhardt.nsw.gov.au/Home/Home">Home</a> |&nbsp;<a href="http://www.leichhardt.nsw.gov.au/Accessibility/Accessibility">Accessibility</a> |&nbsp;<a href="http://www.leichhardt.nsw.gov.au/About-Council/Right-to-Information/Right-to-Information">Right to Information</a>&nbsp;|&nbsp;<a href="http://www.leichhardt.nsw.gov.au/Privacy/Privacy">Privacy</a>                     </div>                  </div>              </div>                        </div>          <script type="text/javascript" src="../../Common/Javascript/final.js"></script>          <script type="text/javascript" src="../../Common/User/User.js"></script>           <script type="text/javascript">              $(document).ready(function () {                  document.title = document.title + ' - TechnologyOne';              });          </script>            <script type="text/javascript">  //<![CDATA[  Sys.Application.add_init(function() {      $create(Artem.Google.MarkersBehavior, {"markerOptions":[{"clickable":true,"draggable":true,"optimized":true,"raiseOnDrag":true,"title":"4 North Avenue LEICHHARDT NSW 2040","visible":true,"address":"4 North Avenue LEICHHARDT NSW 2040"}],"name":"ctl00$ctMain$info$map$gmap_GoogleMarkers"}, null, null, $get("ctl00_ctMain_info_map_gmap"));  });  Sys.Application.add_init(function() {      $create(Artem.Google.Map, {"address":"4 North Avenue LEICHHARDT NSW 2040","backgroundColor":"Gray","disableDefaultUI":false,"disableDoubleClickZoom":false,"draggable":true,"enableReverseGeocoding":false,"keyboardShortcuts":false,"mapType":1,"mapTypeControl":true,"mapTypeControlOptions":{"position":2,"style":0},"name":"ctl00$ctMain$info$map$gmap","noClear":false,"overviewMapControl":true,"overviewMapControlOptions":{"opened":false},"panControl":false,"panControlOptions":{"position":0},"rotateControl":false,"rotateControlOptions":{"position":0},"scaleControl":true,"scaleControlOptions":{"position":0,"style":0},"scrollwheel":true,"shortID":"gmap","showTraffic":false,"streetViewControl":true,"tilt":0,"zoom":18,"zoomControl":true,"zoomControlOptions":{"position":0,"style":0}}, null, null, $get("ctl00_ctMain_info_map_gmap"));  });  //]]>  </script>  </form>  </body>  </html>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Blacktown City Council - Application Details
+</title><link href="../../App_Themes/BCC/Default.css" type="text/css" rel="stylesheet" /></head>
+<body>
+
+<script type="text/javascript" src="../../Scripts/jquery-1.8.3.min.js"></script> 
+
+    <form method="post" action="eTrackApplicationDetails.aspx?r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.APPDET.VIW&amp;ApplicationId=CC-19-00463" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_Content_cusPageComponents_tsmAjax_HiddenField" id="ctl00_Content_cusPageComponents_tsmAjax_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA2NzA5NzQxNA9kFgJmD2QWAgIBD2QWBgIED2QWBgIBD2QWAmYPZBYEAgEPZBYCZg9kFgJmEA8WEB4EVGV4dAUJRWRpdCBNb2RlHgtDb21tYW5kTmFtZQUEVGFzax4PQ29tbWFuZEFyZ3VtZW50BRpQMUVQUkN1c3RvbWlzYXRpb25FZGl0TW9kZR4JQWNjZXNzS2V5ZR4QQ2F1c2VzVmFsaWRhdGlvbmgeCFRhYkluZGV4AQAAHgdUb29sVGlwZR4PVmFsaWRhdGlvbkdyb3VwZWRkZAICD2QWAmYPZBYCZhAPFhAfAAUNUmVmcmVzaCBDYWNoZR8BBQRUYXNrHwIFHlAxRVBSQ3VzdG9taXNhdGlvblJlZnJlc2hDYWNoZR8DZR8EaB8FAQAAHwZlHwdlZGRkAgMPDxYCHgdWaXNpYmxlaGQWAgICDw9kDw8UKwABFgYeBE5hbWUFCmxzRnVuY3Rpb24eDERlZmF1bHRWYWx1ZQUSJFAxLkVUUi5BUFBERVQuVklXHg5QYXJhbWV0ZXJWYWx1ZWQUKwEBAgNkZAIFDw8WAh8IaGRkAgcPZBYGAgEPDxYCHwBlZGQCAw9kFgICAg9kFgICAQ8WAh4LXyFJdGVtQ291bnQCBBYIZg9kFgYCAQ9kFgICARAPFgIfAAUTQXBwbGljYXRpb24gRGV0YWlsc2RkZAIDD2QWAgIBDw8WBh4IR3JpZFR5cGUFEUVUUkFDS0FQUExJQ0FUSU9OHghWaWV3TmFtZQUhJEFsbCAtIGVUcmFjayBBcHBsaWNhdGlvbiBEZXRhaWxzHghLZXlWYWx1ZQUHNDYwMzIyNGQWAmYPZBYEAgEPZBYCAgEQDxYCHwAFCUdyaWQgVHlwZWRkZAIDDw8WAh8IaGQWAgIBEA8WAh8ABRxObyBpbmZvcm1hdGlvbiBpcyBhdmFpbGFibGUuZGRkAgUPFgIeCUNvbGxhcHNlZGhkAgEPZBYGAgEPZBYCAgEQDxYCHwAFDEFzc29jaWF0aW9uc2RkZAIDD2QWAgIBDw8WBh8NBRFFVFJBQ0tOQU1FREVUQUlMUx8OBRokQWxsIC0gZVRyYWNrIE5hbWUgRGV0YWlscx8PBQc0NjAzMjI0ZBYCZg9kFgQCAQ9kFgICARAPFgIfAAUJR3JpZCBUeXBlZGRkAgMPDxYCHwhoZBYCAgEQDxYCHwAFHE5vIGluZm9ybWF0aW9uIGlzIGF2YWlsYWJsZS5kZGQCBQ8WAh8QaGQCAg9kFgYCAQ9kFgICARAPFgIfAAUKUHJvcGVydGllc2RkZAIDD2QWAgIBDw8WBh8NBRRFVFJBQ0tQUk9QRVJUWURFVEFJTB8OBR4kQWxsIC0gZVRyYWNrIFByb3BlcnR5IERldGFpbHMfDwUHNDYwMzIyNGQWAmYPZBYEAgEPZBYCAgEQDxYCHwAFCUdyaWQgVHlwZWRkZAIDDw8WAh8IaGQWAgIBEA8WAh8ABRxObyBpbmZvcm1hdGlvbiBpcyBhdmFpbGFibGUuZGRkAgUPFgIfEGhkAgMPZBYGAgEPZBYCAgEQDxYCHwAFFFJlbGF0ZWQgQXBwbGljYXRpb25zZGRkAgMPZBYCAgEPDxYGHw0FEEVUUkFDS1JFTEFURURBUFAfDgUiJEFsbCAtIGVUcmFjayBSZWxhdGVkIEFwcGxpY2F0aW9ucx8PBQc0NjAzMjI0ZBYCZg9kFgQCAQ9kFgICARAPFgIfAAUJR3JpZCBUeXBlZGRkAgMPDxYCHwhoZBYCAgEQDxYCHwAFHE5vIGluZm9ybWF0aW9uIGlzIGF2YWlsYWJsZS5kZGQCBQ8WAh8QaGQCBQ9kFgJmDw8WAh8IaGQWBgIDDw8WAh8ABV88ZGl2IGNsYXNzPSdpbmZvcm1hdGlvbkJveCc+VGhlIGFkZHJlc3MgeW91IGhhdmUgc2VsZWN0ZWQgY2Fubm90IGJlIGRpc3BsYXllZCBvbiB0aGUgbWFwLjwvZGl2PmRkAgUPDxYCHwAFYTxkaXYgY2xhc3M9J2luZm9ybWF0aW9uQm94Jz5UaGUgTG9jYXRpb24gb2YgdGhlIFByb3BlcnR5IGlzIGRpc3BsYXllZCBvbiB0aGUgZm9sbG93aW5nIG1hcC48L2Rpdj5kZAIHDw8WAh8ABYMBPGRpdiBjbGFzcz0naW5mb3JtYXRpb25Cb3gnPlRoZSBtYXAgbG9jYXRpb24gcmV0cmlldmFsIHNlcnZpY2UgaXMgY3VycmVudGx5IG5vdCBhdmFpbGFibGUsIHBsZWFzZSBjb250YWN0IHlvdXIgQWRtaW5pc3RyYXRvci48L2Rpdj5kZAINDxYCHwhoZBgOBXBjdGwwMCRDb250ZW50JGN1c1BhZ2VDb21wb25lbnRzJHJlcFBhZ2VDb21wb25lbnRzJGN0bDAxJGN1c1BhZ2VDb21wb25lbnRHcmlkJHJlcFdlYkdyaWQkY3RsMDEkZHR2V2ViR3JpZExpc3RWaWV3DxQrAAdkZGRkZBYAAgFkBXNjdGwwMCRDb250ZW50JGN1c1BhZ2VDb21wb25lbnRzJHJlcFBhZ2VDb21wb25lbnRzJGN0bDAxJGN1c1BhZ2VDb21wb25lbnRHcmlkJHJlcFdlYkdyaWQkY3RsMDEkZ3JkV2ViR3JpZFRhYnVsYXJWaWV3DzwrAAoBCAIBZAVwY3RsMDAkQ29udGVudCRjdXNQYWdlQ29tcG9uZW50cyRyZXBQYWdlQ29tcG9uZW50cyRjdGwwMiRjdXNQYWdlQ29tcG9uZW50R3JpZCRyZXBXZWJHcmlkJGN0bDAwJGR0dldlYkdyaWRMaXN0Vmlldw8UKwAHZGRkZGQWAAIBZAVwY3RsMDAkQ29udGVudCRjdXNQYWdlQ29tcG9uZW50cyRyZXBQYWdlQ29tcG9uZW50cyRjdGwwMyRjdXNQYWdlQ29tcG9uZW50R3JpZCRyZXBXZWJHcmlkJGN0bDAwJGR0dldlYkdyaWRMaXN0Vmlldw8UKwAHZGRkZGQWAAIBZAVzY3RsMDAkQ29udGVudCRjdXNQYWdlQ29tcG9uZW50cyRyZXBQYWdlQ29tcG9uZW50cyRjdGwwMCRjdXNQYWdlQ29tcG9uZW50R3JpZCRyZXBXZWJHcmlkJGN0bDAwJGdyZFdlYkdyaWRUYWJ1bGFyVmlldw88KwAKAQgCAWQFcGN0bDAwJENvbnRlbnQkY3VzUGFnZUNvbXBvbmVudHMkcmVwUGFnZUNvbXBvbmVudHMkY3RsMDAkY3VzUGFnZUNvbXBvbmVudEdyaWQkcmVwV2ViR3JpZCRjdGwwMCRkdHZXZWJHcmlkTGlzdFZpZXcPFCsAB2RkZGRkFgACAWQFcGN0bDAwJENvbnRlbnQkY3VzUGFnZUNvbXBvbmVudHMkcmVwUGFnZUNvbXBvbmVudHMkY3RsMDEkY3VzUGFnZUNvbXBvbmVudEdyaWQkcmVwV2ViR3JpZCRjdGwwMCRkdHZXZWJHcmlkTGlzdFZpZXcPFCsAB2RkZGRkFgACAWQFc2N0bDAwJENvbnRlbnQkY3VzUGFnZUNvbXBvbmVudHMkcmVwUGFnZUNvbXBvbmVudHMkY3RsMDMkY3VzUGFnZUNvbXBvbmVudEdyaWQkcmVwV2ViR3JpZCRjdGwwMCRncmRXZWJHcmlkVGFidWxhclZpZXcPPCsACgEIAgFkBXNjdGwwMCRDb250ZW50JGN1c1BhZ2VDb21wb25lbnRzJHJlcFBhZ2VDb21wb25lbnRzJGN0bDAyJGN1c1BhZ2VDb21wb25lbnRHcmlkJHJlcFdlYkdyaWQkY3RsMDAkZ3JkV2ViR3JpZFRhYnVsYXJWaWV3DzwrAAoBCAIBZAVzY3RsMDAkQ29udGVudCRjdXNQYWdlQ29tcG9uZW50cyRyZXBQYWdlQ29tcG9uZW50cyRjdGwwMSRjdXNQYWdlQ29tcG9uZW50R3JpZCRyZXBXZWJHcmlkJGN0bDAyJGdyZFdlYkdyaWRUYWJ1bGFyVmlldw88KwAKAQgCAWQFc2N0bDAwJENvbnRlbnQkY3VzUGFnZUNvbXBvbmVudHMkcmVwUGFnZUNvbXBvbmVudHMkY3RsMDEkY3VzUGFnZUNvbXBvbmVudEdyaWQkcmVwV2ViR3JpZCRjdGwwMCRncmRXZWJHcmlkVGFidWxhclZpZXcPPCsACgEIAgFkBXBjdGwwMCRDb250ZW50JGN1c1BhZ2VDb21wb25lbnRzJHJlcFBhZ2VDb21wb25lbnRzJGN0bDAxJGN1c1BhZ2VDb21wb25lbnRHcmlkJHJlcFdlYkdyaWQkY3RsMDIkZHR2V2ViR3JpZExpc3RWaWV3DxQrAAdkZGRkZBYAAgFkBXNjdGwwMCRDb250ZW50JGN1c1BhZ2VDb21wb25lbnRzJHJlcFBhZ2VDb21wb25lbnRzJGN0bDAxJGN1c1BhZ2VDb21wb25lbnRHcmlkJHJlcFdlYkdyaWQkY3RsMDMkZ3JkV2ViR3JpZFRhYnVsYXJWaWV3DzwrAAoBCAIBZAVwY3RsMDAkQ29udGVudCRjdXNQYWdlQ29tcG9uZW50cyRyZXBQYWdlQ29tcG9uZW50cyRjdGwwMSRjdXNQYWdlQ29tcG9uZW50R3JpZCRyZXBXZWJHcmlkJGN0bDAzJGR0dldlYkdyaWRMaXN0Vmlldw8UKwAHZGRkZGQWAAIBZFtx/V0gsJ3A4ZH7A7iely/t5YVH" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/T1PRProd/WebApps/eProperty/WebResource.axd?d=ax0hsyMAyZHeLOmOk0H0eXE_TZtti4-ft8Gc4rMUA4l6-6S8czQfhWqBH_f7OeZFlmOSGhBnp7pNU8NINltH4-R3nPM1&amp;t=636284993597151108" type="text/javascript"></script>
+
+
+<script src="/T1PRProd/WebApps/eProperty/WebResource.axd?d=YIywYCA0KvkE-TezN2PRz8LWVUX446TwYXnpx7BvSE9Huk0uH8bzn2ldNG4PK9LIHosLbTmgRfFEIMWczDCc_axFi2ZOs6KqhYNn6NthEJ4osOsSU_6W8LT_7TFeRU5ELzbQKg2&amp;t=636755426560000000" type="text/javascript"></script>
+<script src="/T1PRProd/WebApps/eProperty/ScriptResource.axd?d=pSzrgNRYaBKHFTKsaOnvHiX6COO5NhnAsx1UhE0KNGBCS9IrAD-SwiCFWyY8q-r-djKFlqHLktJV4uWt2XRgGXEP7VwSq7oRs5i7LYKds-LSHRVYSTgC6MXHu6ELFLtLeDTVsLNmGbceGtegJq2AdKbw1D41&amp;t=ffffffffbcb9b94a" type="text/javascript"></script>
+<script src="/T1PRProd/WebApps/eProperty/ScriptResource.axd?d=MQSfnn3NjCZb6_adG2ttAQh8bUewturdmwpYfMkKX97ZB7KITH54uzQU76Hp4VTj1nyEJjd0Pgpj69zcfKFybZLudcG0sLjkB662tA51Lo1iVCZhwNQVkwSWQOWHulgv7L7Ai7VzS0yi4z46UZZ48GFT9vib-Ljz4Hm3os-dNVLtKNPI0&amp;t=ffffffffbcb9b94a" type="text/javascript"></script>
+<script src="/T1PRProd/WebApps/eProperty/ScriptResource.axd?d=RSVX_08-t_vgFCs-4_GK22y2mrcNrq5TKAsmnfRgStI1bvuMKr9H1W0DehZORiaFPutopHJSpKeHhjPV3d9sfEpisW64cQhMhz7KOY_4P5DHoPcORtvY9W1xcsGt4R1sWNAI1HIcKMUls0owsB-FHd8t31w1&amp;t=ffffffffcb21d4c0" type="text/javascript"></script>
+<script src="/T1PRProd/WebApps/eProperty/ScriptResource.axd?d=BulXPJloY8BaYnLacANAYMlyw5h_20Y-RZ5ucFgFgS7QtT80_IoTHyWlJsRSLhcTvfH-6rZzx7BOOHl39VMvbJ_be5tQVAQAnxA4bVZ52kZN6d-ck3H0wXk6ZrorpVZlKuRogSudyat69cu8JeQgitggGZU1&amp;t=ffffffffcb21d4c0" type="text/javascript"></script>
+<script src="/T1PRProd/WebApps/eProperty/ScriptResource.axd?d=fagUZlOwuzC23jzp_1rO8Bj2zHb9tyWMGbGMR0i-YGXILI2OCPJUJ2AYufhHtKhbHn9o7TIa5en2lYu1KPNyIm0WaPlbF9jILlOhBAK8coKWLgy6pem0KPZmTDml4jbp9eU5LFMAl8IbN5uW3pWkSjPLPSE1&amp;t=ffffffffcb21d4c0" type="text/javascript"></script>
+<script src="/T1PRProd/WebApps/eProperty/ScriptResource.axd?d=n4x5ELuR6WC0MK7mGM75AnOpWLwRGXWQX-2s3d0mF-VkhfpnbEqA7ZpWaxlwXy0TCjByMfjQa-nYgYa6kzrUavfoxGhajKBHfVBLJnqpgs8isoi3nDr28CWyjh2DRy1s44d5aJh-ZlYY4EPwmjLJ0R3n8DI1&amp;t=ffffffffcb21d4c0" type="text/javascript"></script>
+<script src="/T1PRProd/WebApps/eProperty/ScriptResource.axd?d=dklXNo1ZqkSUN8-FHLBhPNCWVkJEAroJVi26UpyRQ1be6hCBccbA4DVABGE5H4PVocjc6jK9tSzMb3ac1TyjeSvBRVEfBg2B4IPXU4aDUwayv9hHNECzMzK2sd69k06eHXrZ_u_-jxT4Xcn76O2Z0T_6suxHS4aUtLRiTQ2PSA4IQKwQ0&amp;t=ffffffffcb21d4c0" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B381028F" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwKt9+vVCQK359HKDwK359HKDwKa/8XbCgKX7ZGVAgKjjf2bCgKjjf2bCgL8xoOkAQLjj+mGBALjj+mGBALp6tSpBQK6nNCjCgKkp5WBBAKB4ZKlBAK/g8WMCf7ETpeqSVLDal2HNMg+fSsVymjN" />
+</div>
+        <div id="loading">               
+        </div>
+        <div id="cssBounds">
+
+            <div id="cssBanner" >
+                    <!-- Login -->
+                    <div class="speciallink">
+                        
+                            <span class="Login">
+                                <script type="text/javascript">
+	<!--
+	document.write('<a id=\"ctl00_ctlLogin_cmdLogin\" accesskey=\"L\" title=\"Access Key: L\" href=\"javascript:__doPostBack(\'ctl00$ctlLogin$cmdLogin\',\'\')\">Login</a>');
+	// -->
+
+</script><noscript>
+	<div class="noScriptLinkButton">
+		<input type="submit" name="ctl00$ctlLogin$cmdLogin" value="Login" id="ctl00_ctlLogin_cmdLogin" accesskey="L" title="Access Key: L" />
+	</div>
+</noscript>                                
+                             </span>
+                            
+                     </div>
+                    <!-- End Login -->            
+                <div id="cssBannerLogo">
+                    <a href="https://marlow.blacktown.nsw.gov.au/T1PRProd/WebApps/eProperty/P1/GuestHome.aspx?r=BCC.P1.WEBGUEST&f=$P1.EPR.GUESTHME.VIW" id="ctl00_cmdHomeNav">
+                        <img src="../../App_Themes/Default/Images/Empty.gif" id="ctl00_imageHomeNav" border="0" class="homeNav" />
+                    </a>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="cssContentArea">
+                <div id="cssTaskpane"  class = "cssNoPrint">
+                    
+                    <div>
+                        
+                                <div class="menuPanel">
+                            
+                                <div class="menuHeader">
+                                    <span id="ctl00_Taskpane_rprMenuList_ctl01_lblMenuGroupHeader"><span>Online applications</span></span>
+                                </div>
+                                <ul class="menuGroupList">
+	<li><a href="../ShoppingCart/ShoppingCart.aspx?r=BCC.P1.WEBGUEST&amp;f=P1.PAY.CART.VIW">Shopping cart</a></li><li><a href="../eSubmit/SubmitApplication.aspx?r=BCC.P1.WEBGUEST&amp;f=P1.ESB.SUBMTAPP.VIW">Submit an application</a></li>
+</ul>
+                                <br />
+                            
+                                <div class="menuHeader">
+                                    <span id="ctl00_Taskpane_rprMenuList_ctl02_lblMenuGroupHeader"><span>Online payments</span></span>
+                                </div>
+                                <ul class="menuGroupList">
+	<li><a href="../ePay/RatesPayment.aspx?r=BCC.P1.WEBGUEST&amp;f=P1.EPY.RATES.ENQ">Rates payment</a></li>
+</ul>
+                                <br />
+                            
+                                <div class="menuHeader">
+                                    <span id="ctl00_Taskpane_rprMenuList_ctl03_lblMenuGroupHeader"><span>Development register</span></span>
+                                </div>
+                                <ul class="menuGroupList">
+	<li><a href="eTrackApplicationSearch.aspx?r=BCC.P1.WEBGUEST&amp;f=P1.ETR.SEARCH.ENQ">Application search</a></li>
+</ul>
+                                <br />
+                            
+                                </div>
+                            
+                        
+                    </div>
+                            
+                </div>
+                
+                <div id="cssTaskpaneRelatedLinks"  class= "cssNoPrint">
+                    
+                        <div id="ctl00_RightTaskPane_tspRelatedLinks" class="taskPanel">
+<div class="taskHeader">Related Links</div>
+<ul>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=S&amp;Period=TW&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.STW&amp;ApplicationId=CC-19-00463">Submitted This Week</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=S&amp;Period=LW&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.SLW&amp;ApplicationId=CC-19-00463">Submitted Last Week</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=S&amp;Period=TM&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.STM&amp;ApplicationId=CC-19-00463">Submitted This Month</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=S&amp;Period=LM&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.SLM&amp;ApplicationId=CC-19-00463">Submitted Last Month</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=S&amp;Period=L7&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.SL7&amp;ApplicationId=CC-19-00463">Submitted Last 7 Days</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=S&amp;Period=L14&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.SL14&amp;ApplicationId=CC-19-00463">Submitted Last 14 Days</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=S&amp;Period=L28&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.SL28&amp;ApplicationId=CC-19-00463">Submitted Last 28 Days</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=D&amp;Period=TW&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.DTW&amp;ApplicationId=CC-19-00463">Determined This Week</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=D&amp;Period=LW&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.DLW&amp;ApplicationId=CC-19-00463">Determined Last Week</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=D&amp;Period=TM&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.DTM&amp;ApplicationId=CC-19-00463">Determined This Month</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=D&amp;Period=LM&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.DLM&amp;ApplicationId=CC-19-00463">Determined Last Month</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=D&amp;Period=L7&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.DL7&amp;ApplicationId=CC-19-00463">Determined Last 7 Days</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=D&amp;Period=L14&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.DL14&amp;ApplicationId=CC-19-00463">Determined Last 14 Days</a></li>
+<li><a href="eTrackApplicationSearchResults.aspx?Field=D&amp;Period=L28&amp;r=BCC.P1.WEBGUEST&amp;f=%24P1.ETR.SEARCH.DL28&amp;ApplicationId=CC-19-00463">Determined Last 28 Days</a></li>
+</ul>
+<div class="taskFooter">&nbsp;</div>
+</div>
+
+                        
+                    
+                    
+                    <div id="cssHelpAndAdmin">
+                        
+    
+         
+         
+
+                    </div>
+                </div>
+                                
+                <div id="cssContent">
+                <div class="cssContentWorkspace">
+                    <a id="cssContentTop"></a>
+                    
+                        <h1 id="ctl00_Header_h1PageTitle">Application Details</h1>
+                    
+                    
+                    <div id="ctl00_valErrors" class="validatorSummary" style="display:none;">
+
+</div>
+                              
+                    
+
+<span id="ctl00_Content_cusApplicationDetails"></span>
+<br />
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$Content$cusPageComponents$tsmAjax', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+
+<div id="ctl00_Content_cusPageComponents_pnlPageComponents">
+	
+    
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_pnlComponentHeading">
+		
+                <span id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_lblComponentHeading" class="pageComponentHeading"><span>Application Details</span></span>
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_imgComponentSeparator" Class="sectionSeparator" src="../../App_Themes/BCC/Images/Empty.gif" alt="" style="height:0px;width:95%;border-width:0px;" />
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_imgPanelCollapser" src="../../App_Themes/BCC/Images/blank.gif" alt="" style="border-width:0px;" />
+            
+	</div> 
+            
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_pnlComponent">
+		
+                <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_cusPageComponentGrid_pnlCustomisationGrid">
+			
+    
+    
+    
+            
+ 
+            <div>
+				<table class="grid" cellspacing="0" cellpadding="3" border="0" id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_cusPageComponentGrid_repWebGrid_ctl00_dtvWebGridListView" style="width:100%;border-collapse:collapse;">
+					<tr class="normalRow">
+						<td class="headerColumn">Application ID</td><td>CC-19-00463</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Description</td><td>Demolition of existing Awning - construct new Awning</td>
+					</tr><tr class="normalRow">
+						<td class="headerColumn">Group</td><td>Construction Certificate</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Category</td><td>CC Council Issued</td>
+					</tr><tr class="normalRow">
+						<td class="headerColumn">Sub Category</td><td>Awning, Demolition</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Status</td><td>Current</td>
+					</tr><tr class="normalRow">
+						<td class="headerColumn">Lodgement Date</td><td>1/04/2019</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Stage/Decision</td><td>Further Information Requested</td>
+					</tr><tr class="normalRow">
+						<td class="headerColumn">Estimated Cost</td><td>$6,818.18</td>
+					</tr>
+				</table>
+			</div>
+
+            
+            
+            <br />
+            
+            
+            
+        
+
+		</div>
+
+
+
+
+
+                <br />
+            
+	</div>    
+            
+            <input type="hidden" name="ctl00$Content$cusPageComponents$repPageComponents$ctl00$cpePanels_ClientState" id="ctl00_Content_cusPageComponents_repPageComponents_ctl00_cpePanels_ClientState" />
+            
+        
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_pnlComponentHeading">
+		
+                <span id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_lblComponentHeading" class="pageComponentHeading"><span>Associations</span></span>
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_imgComponentSeparator" Class="sectionSeparator" src="../../App_Themes/BCC/Images/Empty.gif" alt="" style="height:0px;width:95%;border-width:0px;" />
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_imgPanelCollapser" src="../../App_Themes/BCC/Images/blank.gif" alt="" style="border-width:0px;" />
+            
+	</div> 
+            
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_pnlComponent">
+		
+                <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_cusPageComponentGrid_pnlCustomisationGrid">
+			
+    
+    
+    
+            
+ 
+            <div>
+				<table class="grid" cellspacing="0" cellpadding="3" border="0" id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_cusPageComponentGrid_repWebGrid_ctl00_dtvWebGridListView" style="width:100%;border-collapse:collapse;">
+					<tr class="normalRow">
+						<td class="headerColumn">Name</td><td>Christopher Gordon Rodrigues</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Association</td><td>Building/Planning/Approval Applicant</td>
+					</tr>
+				</table>
+			</div>
+
+            
+            
+            <br />
+            
+            
+            
+        
+            
+ 
+            <div>
+				<table class="grid" cellspacing="0" cellpadding="3" border="0" id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_cusPageComponentGrid_repWebGrid_ctl01_dtvWebGridListView" style="width:100%;border-collapse:collapse;">
+					<tr class="normalRow">
+						<td class="headerColumn">Name</td><td>Sophie Rosemary Rodrigues</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Association</td><td>Building/Planning/Approval Applicant</td>
+					</tr>
+				</table>
+			</div>
+
+            
+            
+            <br />
+            
+            
+            
+        
+            
+ 
+            <div>
+				<table class="grid" cellspacing="0" cellpadding="3" border="0" id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_cusPageComponentGrid_repWebGrid_ctl02_dtvWebGridListView" style="width:100%;border-collapse:collapse;">
+					<tr class="normalRow">
+						<td class="headerColumn">Name</td><td>Christopher Gordon Rodrigues</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Association</td><td>Owner</td>
+					</tr>
+				</table>
+			</div>
+
+            
+            
+            <br />
+            
+            
+            
+        
+            
+ 
+            <div>
+				<table class="grid" cellspacing="0" cellpadding="3" border="0" id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_cusPageComponentGrid_repWebGrid_ctl03_dtvWebGridListView" style="width:100%;border-collapse:collapse;">
+					<tr class="normalRow">
+						<td class="headerColumn">Name</td><td>Sophie Rosemary Rodrigues</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Association</td><td>Owner</td>
+					</tr>
+				</table>
+			</div>
+
+            
+            
+            <br />
+            
+            
+            
+        
+
+		</div>
+
+
+
+
+
+                <br />
+            
+	</div>    
+            
+            <input type="hidden" name="ctl00$Content$cusPageComponents$repPageComponents$ctl01$cpePanels_ClientState" id="ctl00_Content_cusPageComponents_repPageComponents_ctl01_cpePanels_ClientState" />
+            
+        
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_pnlComponentHeading">
+		
+                <span id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_lblComponentHeading" class="pageComponentHeading"><span>Properties</span></span>
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_imgComponentSeparator" Class="sectionSeparator" src="../../App_Themes/BCC/Images/Empty.gif" alt="" style="height:0px;width:95%;border-width:0px;" />
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_imgPanelCollapser" src="../../App_Themes/BCC/Images/blank.gif" alt="" style="border-width:0px;" />
+            
+	</div> 
+            
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_pnlComponent">
+		
+                <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_cusPageComponentGrid_pnlCustomisationGrid">
+			
+    
+    
+    
+            
+ 
+            <div>
+				<table class="grid" cellspacing="0" cellpadding="3" border="0" id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_cusPageComponentGrid_repWebGrid_ctl00_dtvWebGridListView" style="width:100%;border-collapse:collapse;">
+					<tr class="normalRow">
+						<td class="headerColumn">Address</td><td><script type="text/javascript">
+	<!--
+	document.write('<a href=\"javascript:__doPostBack(\'ctl00$Content$cusPageComponents$repPageComponents$ctl02$cusPageComponentGrid$repWebGrid$ctl00$dtvWebGridListView$ctl02\',\'\')\">3 Croatia Place QUAKERS HILL  NSW  2763</a>');
+	// -->
+
+</script><noscript>
+	<div class="noScriptLinkButton">
+		<input type="submit" name="ctl00$Content$cusPageComponents$repPageComponents$ctl02$cusPageComponentGrid$repWebGrid$ctl00$dtvWebGridListView$ctl02" value="3 Croatia Place QUAKERS HILL  NSW  2763" id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_cusPageComponentGrid_repWebGrid_ctl00_dtvWebGridListView_ctl02" />
+	</div>
+</noscript></td>
+					</tr><tr class="normalRow">
+						<td class="headerColumn">Land Description</td><td>Lot 507 DP 809465</td>
+					</tr>
+				</table>
+			</div>
+
+            
+            
+            <br />
+            
+            
+            
+        
+
+		</div>
+
+
+
+
+
+                <br />
+            
+	</div>    
+            
+            <input type="hidden" name="ctl00$Content$cusPageComponents$repPageComponents$ctl02$cpePanels_ClientState" id="ctl00_Content_cusPageComponents_repPageComponents_ctl02_cpePanels_ClientState" />
+            
+        
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_pnlComponentHeading">
+		
+                <span id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_lblComponentHeading" class="pageComponentHeading"><span>Related Applications</span></span>
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_imgComponentSeparator" Class="sectionSeparator" src="../../App_Themes/BCC/Images/Empty.gif" alt="" style="height:0px;width:95%;border-width:0px;" />
+                <img id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_imgPanelCollapser" src="../../App_Themes/BCC/Images/blank.gif" alt="" style="border-width:0px;" />
+            
+	</div> 
+            
+            <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_pnlComponent">
+		
+                <div id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_cusPageComponentGrid_pnlCustomisationGrid">
+			
+    
+    
+    
+            
+ 
+            <div>
+				<table class="grid" cellspacing="0" cellpadding="3" border="0" id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_cusPageComponentGrid_repWebGrid_ctl00_dtvWebGridListView" style="width:100%;border-collapse:collapse;">
+					<tr class="normalRow">
+						<td class="headerColumn">Application ID</td><td><script type="text/javascript">
+	<!--
+	document.write('<a href=\"javascript:__doPostBack(\'ctl00$Content$cusPageComponents$repPageComponents$ctl03$cusPageComponentGrid$repWebGrid$ctl00$dtvWebGridListView$ctl02\',\'\')\">DA-18-02419</a>');
+	// -->
+
+</script><noscript>
+	<div class="noScriptLinkButton">
+		<input type="submit" name="ctl00$Content$cusPageComponents$repPageComponents$ctl03$cusPageComponentGrid$repWebGrid$ctl00$dtvWebGridListView$ctl02" value="DA-18-02419" id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_cusPageComponentGrid_repWebGrid_ctl00_dtvWebGridListView_ctl02" />
+	</div>
+</noscript></td>
+					</tr><tr class="normalRow">
+						<td class="headerColumn">Description</td><td>Awning-demolition of exiting awning</td>
+					</tr><tr class="alternateRow">
+						<td class="headerColumn">Relationship</td><td>Parent</td>
+					</tr>
+				</table>
+			</div>
+
+            
+            
+            <br />
+            
+            
+            
+        
+
+		</div>
+
+
+
+
+
+                <br />
+            
+	</div>    
+            
+            <input type="hidden" name="ctl00$Content$cusPageComponents$repPageComponents$ctl03$cpePanels_ClientState" id="ctl00_Content_cusPageComponents_repPageComponents_ctl03_cpePanels_ClientState" />
+            
+        
+
+</div>
+
+
+
+ 
+<noscript></noscript> 
+<br/>
+<input name="ctl00$Content$ctrlMap$hidVectorInformation" type="hidden" id="ctl00_Content_ctrlMap_hidVectorInformation" />
+<input name="ctl00$Content$ctrlMap$hidLayerOption" type="hidden" id="ctl00_Content_ctrlMap_hidLayerOption" />
+<input name="ctl00$Content$ctrlMap$hidWmsBoundaries" type="hidden" id="ctl00_Content_ctrlMap_hidWmsBoundaries" />
+  
+    <div class="actionButtonsLeft">
+        <input type="submit" name="ctl00$Content$btnPrevious" value="Previous" onclick="T1_Tb_Web_OneClickButton(this, '', true);" id="ctl00_Content_btnPrevious" accesskey="P" title="Access Key: P" class="LeftArrowButton" />
+    </div> 
+  
+
+                    <div class="clear"></div>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+                </div>
+            </div>
+            <p></p>
+            <p class="invisible"></p>
+            <div id="cssBottomBar" class="cssNoPrint">
+                <div id="cssBottomBarLegal">                 
+                    <a id="ctl00_hplCustomFooterLink1" accesskey="V" title="Access Key: V" href="http://www.blacktown.nsw.gov.au/About-Council/How-we-work/Access-to-our-information" target="_self">Privacy</a>
+                    <img id="ctl00_imgFooterSeparator1" class="verticalBar" src="../../App_Themes/BCC/Images/VerticalBarBlack.gif" alt="" style="height:10px;width:1px;border-width:0px;" />
+                    <a id="ctl00_hplCustomFooterLink2" accesskey="T" title="Access Key: T" href="../TermsOfUse.aspx?r=BCC.P1.WEBGUEST&amp;f=BCC.TERMS.VIW" target="_self">Terms of Use</a>
+                    <img id="ctl00_imgFooterSeparator2" class="verticalBar" src="../../App_Themes/BCC/Images/VerticalBarBlack.gif" alt="" style="height:10px;width:1px;border-width:0px;" />
+                    <a id="ctl00_hplCustomFooterLink3" accesskey="U" title="Access Key: U" href="http://www.blacktown.nsw.gov.au/About-Council/Give-us-feedback/Contact-us" target="_self">Contact Us</a>                       
+                    
+                </div>
+                <div id="cssBottomBarCopyright">&copy; Technology One Limited 2019</div>
+            </div>
+            
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_valErrors"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_valErrors = document.all ? document.all["ctl00_valErrors"] : document.getElementById("ctl00_valErrors");
+ctl00_valErrors.headertext = "The following errors occurred while processing your input:";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function () {if ($('#ctl00_valErrors').is(':visible') == true) {$('#__SCROLLPOSITIONX').val('0');$('#__SCROLLPOSITIONY').val('0');}});
+document.getElementById('ctl00_valErrors').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_valErrors'));
+}
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ctl00_Content_cusPageComponents_repPageComponents_ctl00_cpePanels_ClientState","CollapseControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl00_imgPanelCollapser","CollapsedImage":"../../Images/openPanel.gif","CollapsedText":"Expand","ExpandControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl00_imgPanelCollapser","ExpandedImage":"../../Images/closePanel.gif","ExpandedText":"Collapse","ImageControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl00_imgPanelCollapser","id":"ctl00_Content_cusPageComponents_repPageComponents_ctl00_cpePanels"}, null, null, $get("ctl00_Content_cusPageComponents_repPageComponents_ctl00_pnlComponent"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ctl00_Content_cusPageComponents_repPageComponents_ctl01_cpePanels_ClientState","CollapseControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl01_imgPanelCollapser","CollapsedImage":"../../Images/openPanel.gif","CollapsedText":"Expand","ExpandControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl01_imgPanelCollapser","ExpandedImage":"../../Images/closePanel.gif","ExpandedText":"Collapse","ImageControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl01_imgPanelCollapser","id":"ctl00_Content_cusPageComponents_repPageComponents_ctl01_cpePanels"}, null, null, $get("ctl00_Content_cusPageComponents_repPageComponents_ctl01_pnlComponent"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ctl00_Content_cusPageComponents_repPageComponents_ctl02_cpePanels_ClientState","CollapseControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl02_imgPanelCollapser","CollapsedImage":"../../Images/openPanel.gif","CollapsedText":"Expand","ExpandControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl02_imgPanelCollapser","ExpandedImage":"../../Images/closePanel.gif","ExpandedText":"Collapse","ImageControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl02_imgPanelCollapser","id":"ctl00_Content_cusPageComponents_repPageComponents_ctl02_cpePanels"}, null, null, $get("ctl00_Content_cusPageComponents_repPageComponents_ctl02_pnlComponent"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ctl00_Content_cusPageComponents_repPageComponents_ctl03_cpePanels_ClientState","CollapseControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl03_imgPanelCollapser","CollapsedImage":"../../Images/openPanel.gif","CollapsedText":"Expand","ExpandControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl03_imgPanelCollapser","ExpandedImage":"../../Images/closePanel.gif","ExpandedText":"Collapse","ImageControlID":"ctl00_Content_cusPageComponents_repPageComponents_ctl03_imgPanelCollapser","id":"ctl00_Content_cusPageComponents_repPageComponents_ctl03_cpePanels"}, null, null, $get("ctl00_Content_cusPageComponents_repPageComponents_ctl03_pnlComponent"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

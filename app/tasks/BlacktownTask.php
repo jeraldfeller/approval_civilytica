@@ -12,7 +12,6 @@ class BlacktownTask extends _BaseTask {
     public function scrapeAction($params = []) {
 
         $url = "https://services.blacktown.nsw.gov.au/webservices/scm/default.ashx?itemid=890";
-        $url = "https://eservices.blacktown.nsw.gov.au/T1PRProd/WebApps/eProperty//P1/eTrack/eTrackApplicationSearchResults.aspx?Field=S&Period=LM&r=BCC.P1.WEBGUEST&f=%24P1.ETR.SEARCH.SLM";
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -42,42 +41,40 @@ class BlacktownTask extends _BaseTask {
             return false;
         }
 
-        $elements = $html->find("tr[class=normalRow], tr[class=alternateRow]");
-        foreach ($elements as $row) {
+        $daElements = $html->find("DevelopmentsOnNotification");
+        foreach ($daElements as $daElement) {
 
             // Get the council reference so we can check if the DA is known
-            $councilTd = $row->find('td', 0);
-            if ($councilTd === null) {
+            $daCouncilReferenceElement = $daElement->children(0);
+            if ($daCouncilReferenceElement === null) {
                 continue;
             }
 
-            $daCouncilReferenceElement = $this->cleanString($councilTd->innertext());
-            $daCouncilReference = $this->get_string_between($daCouncilReferenceElement, 'value="', '" id="');
-            $this->logger->info($daCouncilReference);
+            $daCouncilReference = $this->cleanString($daCouncilReferenceElement->innertext());
+            $dasUrl = 'https://eservices.blacktown.nsw.gov.au/T1PRProd/WebApps/eProperty/P1/eTrack/eTrackApplicationDetails.aspx?r=BCC.P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId='.$daCouncilReference;
+            $da = Das::exists($this->getCouncil()->getId(), $daCouncilReference) ?: new Das();
+            $da->setCouncilId($this->getCouncil()->getId());
+            $da->setCouncilReference($daCouncilReference);
+            $da->setCouncilUrl($dasUrl);
+            if ($da->save()) {
 
-//            $da = Das::exists($this->getCouncil()->getId(), $daCouncilReference) ?: new Das();
-//            $da->setCouncilId($this->getCouncil()->getId());
-//            $da->setCouncilReference($daCouncilReference);
+                $this->logger->info("");
+                $this->logger->info("Created new development application {da_id} ({da_reference})", [
+                    "da_id" => $da->getId(),
+                    "da_reference" => $da->getCouncilReference()
+                ]);
 
-//            if ($da->save()) {
-//
-//                $this->logger->info("");
-//                $this->logger->info("Created new development application {da_id} ({da_reference})", [
-//                    "da_id" => $da->getId(),
-//                    "da_reference" => $da->getCouncilReference()
-//                ]);
-//
-//                $daHtml = \Sunra\PhpSimple\HtmlDomParser::str_get_html($daElement->outertext());
-//                if ($daHtml === false) {
-//                    continue;
-//                }
-//
-//                // All information is available in the XML, so no need to have a separate scrapeMetaAction()-method
-//                $this->scrapeMeta($daHtml, $da);
-//            }
-//            else {
-//                $this->logger->info("Could not save development application ({error})", ["error" => print_r($da->getMessages(), true)]);
-//            }
+                $daHtml = \Sunra\PhpSimple\HtmlDomParser::str_get_html($daElement->outertext());
+                if ($daHtml === false) {
+                    continue;
+                }
+
+                // All information is available in the XML, so no need to have a separate scrapeMetaAction()-method
+                $this->scrapeMeta($daHtml, $da);
+            }
+            else {
+                $this->logger->info("Could not save development application ({error})", ["error" => print_r($da->getMessages(), true)]);
+            }
         }
 
         $this->getCouncil()->setLastScrape(new DateTime());
@@ -89,7 +86,7 @@ class BlacktownTask extends _BaseTask {
     public function scrapeMetaAction() {
 
         $this->logger->info("This council does not offer DA-specific pages, so all of the "
-                . "information for a development application is pulled from the initial scrape()-method.");
+            . "information for a development application is pulled from the initial scrape()-method.");
         return false;
 
     }
@@ -201,47 +198,6 @@ class BlacktownTask extends _BaseTask {
     protected function extractDocuments($html, $da, $params = null): bool {
         return false;
 
-    }
-
-
-    function get_string_between($string, $start, $end)
-    {
-        $string = ' ' . $string;
-        $ini = strpos($string, $start);
-        if ($ini == 0) return '';
-        $ini += strlen($start);
-        $len = strpos($string, $end, $ini) - $ini;
-        return substr($string, $ini, $len);
-    }
-
-
-    public function postCurl($url, $formData, $requestHeaders)
-    {
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $formData);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $requestHeaders);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, !$this->config->dev);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, !$this->config->dev);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 300);
-        curl_setopt($ch, CURLOPT_COOKIEFILE, $this->config->directories->cookiesDir . 'cookies.txt');
-        curl_setopt($ch, CURLOPT_COOKIEJAR, $this->config->directories->cookiesDir . 'cookies.txt');
-        curl_setopt($ch, CURLOPT_USERAGENT, $this->config->useragent);
-
-        $output = curl_exec($ch);
-        $errno = curl_errno($ch);
-        $errmsg = curl_error($ch);
-
-        return [
-            'output' => $output,
-            'errno' => $errno,
-            'errmsg' => $errmsg
-        ];
     }
 
 }
