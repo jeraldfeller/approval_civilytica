@@ -448,11 +448,13 @@ class CampbelltownTask extends _BaseTask {
 
     protected function extractLodgeDate($html, $da, $params = null): bool {
 
+
         $headerElements = $html->find("[class=AlternateContentHeading]");
         foreach ($headerElements as $headerElement) {
 
             $headerText = $this->cleanString($headerElement->innertext());
-            if (strpos(strtolower($headerText), "lodged") === false) {
+            if (strpos(strtolower($headerText), "lodge") === false) {
+
                 continue;
             }
 
@@ -461,8 +463,11 @@ class CampbelltownTask extends _BaseTask {
                 return false;
             }
 
-            $value = $this->cleanString($valueElement->innertext());
-            $date = \DateTime::createFromFormat("j/m/Y", $value);
+            $value = $this->cleanString($valueElement->plaintext);
+            $date = \DateTime::createFromFormat("d/m/Y", $value);
+
+
+
             return $this->saveLodgeDate($da, $date);
         }
 

@@ -10,16 +10,61 @@ class WoollahraTask extends _BaseTask
     public $council_params = ["thisweek", "lastweek", "thismonth", "lastmonth"];
     public $council_default_param = "thismonth";
 
+
+    /**
+     * This will set a cookie so we can scrape the DAs
+     */
+    public function acceptTerms()
+    {
+
+        $url = "https://eservices.woollahra.nsw.gov.au/eservice/daEnquiryInit.do?nodeNum=5270";
+
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, !$this->config->dev);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, !$this->config->dev);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_COOKIEFILE, $this->config->directories->cookiesDir . 'cookies.txt');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, $this->config->directories->cookiesDir . 'cookies.txt');
+        curl_setopt($ch, CURLOPT_USERAGENT, $this->config->useragent);
+
+        $output = curl_exec($ch);
+        $errno = curl_errno($ch);
+        $errmsg = curl_error($ch);
+
+
+        curl_close($ch);
+
+        if ($errno !== 0) {
+
+            $message = "cURL error: " . $errmsg . " (" . $errno . ")";
+            $this->logger->error($message);
+            return false;
+        }
+
+    }
+
     public function scrapeAction($params = [])
     {
 
-//        $url = "https://eservices.woollahra.nsw.gov.au/eservice/advertisedDAs.do?orderBy=suburb&nodeNum=5265";
-        $dateFrom = str_replace('-', '%2F', date('01-m-Y'));
-        $dateTo = str_replace('-', '%2F', date('01-m-Y'));
+        // accept terms first
+        $this->acceptTerms();
+        $dateStart = new DateTime("first day of this month");
+        $dateEnd = new DateTime("last day of this month");
 
-        $url = 'https://eservices.woollahra.nsw.gov.au/eservice/daEnquiry/recentlyDetermined.do?num_days=90&nodeNum=5263';
+        $url = 'https://eservices.woollahra.nsw.gov.au/eservice/daEnquiry.do?number=&lodgeRangeType=on&dateFrom='.urlencode($dateStart->format("d/m/Y")).'&dateTo='.urlencode($dateEnd->format("d/m/Y")).'&detDateFromString=&detDateToString=&streetName=&suburb=0&unitNum=&houseNum=0%0D%0A%09%09%09%09%09&planNumber=&strataPlan=&lotNumber=&propertyName=&searchMode=A&submitButton=Search';
+
+        $formData['sortBy'] = 1;
+        $formData['submit'] = 'Sort';
+        $formData = http_build_query($formData);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $formData);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, !$this->config->dev);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, !$this->config->dev);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -35,6 +80,7 @@ class WoollahraTask extends _BaseTask
         $errmsg = curl_error($ch);
         curl_close($ch);
 
+       
         if ($errno !== 0) {
             $this->logger->error("cURL error: {errmsg} ({errno})", ["errmsg" => $errmsg, "errno" => $errno]);
             return false;

@@ -27,7 +27,7 @@ class CronTask extends \Phalcon\Cli\Task {
         foreach ($taskFiles as $taskFile) {
 
             $taskName = explode(".", $taskFile)[0];
-            if($taskName == 'BlacktownTask'){
+            if($taskName == 'CanadabayTask'){
                 $task = new $taskName();
                 $task->initialize();
                 $this->logger->info('-------------INITIALIZE '.$taskName.'-----------------');
@@ -45,7 +45,7 @@ class CronTask extends \Phalcon\Cli\Task {
                     . " LIMIT 1";
 
             $sql = "SELECT * FROM `councils`"
-                    . " WHERE `id` = 3
+                    . " WHERE `id` = 7
                      ORDER BY RAND()"
                     . " LIMIT 1";
 

@@ -1,0 +1,1002 @@
+
+
+
+
+
+
+
+
+
+
+    
+        
+	        
+        
+          
+  
+
+
+
+      
+      
+
+
+
+      
+	  
+      
+      
+
+
+
+    
+    
+        
+        
+    
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+
+
+
+
+
+
+<html lang="en-AU">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<title>
+			Woollahra e-Services
+		</title>
+		<link rel="stylesheet" href="/eservice/library/bootstrap-335.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/jquery-ui.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/jquery-ui.structure.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/jquery-ui.theme.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/e-services.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/calendar.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/daEnquiry_daEnquiry.css" type="text/css" media="screen, projection" >
+<!--[if IE 6]>
+<link rel="stylesheet" href="/eservice/library/ie6.css" type="text/css" media="screen, projection" >
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" href="/eservice/library/ie8.css" type="text/css" media="screen, projection" >
+<![endif]-->
+<link rel="stylesheet" href="/eservice/library/e-print.css" type="text/css" media="print" >
+<link rel="stylesheet" href="/eservice/library/header-eserv.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/council/eservice/default/council_style.css" type="text/css" media="screen, projection, print" >
+
+		<script>var AUTHJS = {};AUTHJS.productName = "i-Services";</script>
+<script type="text/javascript" src="/eservice/jscalendar-1.0/calendar.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery/jquery-1.11.3.min.js"></script>
+<script>AUTHJS.productName = "e-Services";</script>
+<script type="text/javascript" src="/eservice/javascript/tether-1.3.3.js"></script>
+<script type="text/javascript" src="/eservice/javascript/modernizr-283.min.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery/bootstrap-335.min.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery/jquery-ui-datepicker.min.js"></script>
+<script type="text/javascript" src="/eservice/javascript/e-services-page.js"></script>
+<script type="text/javascript" src="/eservice/javascript/prototype.js"></script>
+<script type="text/javascript" src="/eservice/javascript/civica.jquery.plugins.js"></script>
+<script type="text/javascript" src="/eservice/javascript/civica.common.init.js"></script>
+<script type="text/javascript" src="/eservice/javascript/civica.jquery.functions.js"></script>
+<script type="text/javascript" src="/eservice/javascript/util.js"></script>
+<script type="text/javascript" src="/eservice/javascript/json2.js"></script>
+<script type="text/javascript" src="/eservice/javascript/effects.js"></script>
+<script type="text/javascript" src="/eservice/javascript/controls.js"></script>
+<script type="text/javascript" src="/eservice/javascript/dragdrop.js"></script>
+<script type="text/javascript" src="/eservice/javascript/lightbox.js"></script>
+<script type="text/javascript" src="/eservice/javascript/menu.js"></script>
+<script type="text/javascript" src="/eservice/javascript/menuScroll.js"></script>
+<script type="text/javascript" src="/eservice/javascript/sitemap.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery.imageTickBox.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery.metadata.js"></script>
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		
+		
+				<script src="/eservice/javascript/da.js" type="text/javascript"></script>
+		
+				<script src="/eservice/javascript/mkTree.js" type="text/javascript"></script>
+		
+		
+		
+	</head>
+	
+	<body
+		
+	>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var initialTabPage= "null";
+	jQuery(document).ready(function() {
+		if (initialTabPage != "null") {
+			if (initialTabPage=="sitemap"){
+				initialTabPage="#sitemap-controller";    
+			} else {
+				initialTabPage="#dashboard-controller";       
+			}
+			jQuery(initialTabPage + " a.tab-clicker").not(".tabs-content *").click();
+		}
+		
+	});
+
+	(function() {
+		var isBootstrapEvent = false;
+		if (window.jQuery) {
+			var all = jQuery('*');
+			jQuery.each(['hide.bs.dropdown', 
+				'hide.bs.collapse', 
+				'hide.bs.modal', 
+				'hide.bs.tooltip',
+				'hide.bs.popover',
+				'hide.bs.tab'], function(index, eventName) {
+				all.on(eventName, function( event ) {
+					isBootstrapEvent = true;
+				});
+			});
+		}
+		var originalHide = Element.hide;
+		Element.addMethods({
+			hide: function(element) {
+				if(isBootstrapEvent) {
+					isBootstrapEvent = false;
+					return element;
+				}
+				return originalHide(element);
+			}
+		});
+	})();
+</script>
+
+
+
+<!-- eServices -->
+
+	<div id="page" class=" tabbed not-logged-in">
+
+	
+
+
+		<div id="masthead" class="navbar navbar-static-top bs-docs-nav">
+			<div class="container" id="masthead-container">
+				<div class="navbar-header">
+					<a class="navbar-brand">
+						<span><img src="/eservice/icons/WoollahraMC.gif" alt="Woollahra Municipal Council" /></span>
+						
+							Woollahra Council
+						
+					</a>
+					<!-- Begin Top Nav -->
+ 
+<div id="menu"><div class="expand">
+ <ul>
+  <li><a href="http://www.woollahra.nsw.gov.au/home">Home</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/council">Council</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/services">Services</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/building_and_development">Building and development</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/library">Library</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/community">Community</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/environment">Environment</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/recreation">Recreation</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/news">News</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/events">Events</a></li>
+ </ul>						              
+</div></div>
+
+<!-- End Top Nav -->
+				</div>
+				<!-- masthead Quicklinks start -->
+				<div id="wrapper-quick-links">
+					<ul id="quick-links" class="nav navbar-nav navbar-right">
+						<li class="top-link-home">
+							<a href="/eservice/navigationStart.do" id="quick-link-home">
+								Home
+							</a>
+						</li>
+						
+						
+							
+								<li class="top-link-signin">
+									<a href="/eservice/logonInit.do" id="quick-link-signin">
+										Sign In
+									</a>
+								</li>
+							
+							
+						
+						<li class="top-link-user">
+							<a>
+								<!-- masthead User start -->
+				                
+				                    
+									
+									
+											You are a Guest
+									
+									
+								
+								
+								<!-- masthead User end -->
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- masthead Quicklinks end -->
+			</div>
+			<!-- End container -->
+		</div>
+		<!-- End Masthead -->
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="bcpanel">
+			<div class="container" id="bcpanel-container">
+				
+
+
+
+
+
+
+
+
+
+	
+	
+		
+
+
+			</div>
+		</div>
+
+		<!-- End Masthead navbar -->
+
+
+		<div id="content">
+
+			<div class="container" id="content-container">
+
+				<div class="row" id="main-row">
+
+					<div class="col-sm-3" id="bstrap-leftnav">
+
+						
+							<div id="search-results" >
+								
+							</div>  
+						
+
+
+						<div id="admin-tabs" >
+							<div id="dashboard" class="tabs-content">
+
+								
+								
+
+
+								
+								
+								<!-- START MENU CONTENT -->
+
+								
+									
+										<div id="menus-toggle">
+											
+												<div id="menus-button" class="btn btn-default">
+													<span id="menus-button-inner">
+														<a id="menus-button-link" href="#">Hide Menus</a>
+													</span>
+												</div>
+											
+											<div id="site-access" class="menu-on">
+												
+
+
+
+
+
+
+
+
+<ul id="siteaccesspanel">
+
+			
+				
+				
+			
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<li id="siteaccesspanel_1">
+			<div class="menu-group">
+				<div class="menu-header-panel" title="Drag to change panel order">
+					<h3 class="panel-handle">Menu</h3>
+				</div>
+				<p class="menu-handlers">
+				
+				<a href="/eservice/menu/minimisePanel.do?id=1" title="Minimise Panel" class="panel-min-max" id="panel-min-max-1" >
+<img src="/eservice/icons/minimise.gif" alt="Minimise" />
+</a>
+
+				</p>
+				
+					
+					
+
+						<div id="menu-search">
+							<form action="/eservice/menu/search.do" class="menu-search-form">
+								<p>
+								
+								<input type="text" size="15" name="search" id="search" class="field"  value="Menu Search" />
+								
+								<input type="submit" id="menu-search-submit" value="Go" class="buttonCalendar" />
+								<img src="/eservice/icons/loading.gif" alt="loading" class="loading" id="menu-search-loading" />
+								</p>
+								<!-- div id="search-autocomplete" class="autocompleter"></div -->
+							</form>
+							<div id="search-results" >
+								
+							</div>
+							
+						</div>
+
+					
+				
+			
+			<div id="scrollingMenuContainer" class="scrolling-container">
+				<ul id="navigation">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			<li class="nav-return" title="Back one menu level"><a href="/eservice/navigationStart.do" id="node-0"><img src="/eservice/icons/parent.gif" alt="Return to " />Development Applications                          </a></li>
+		
+	
+
+	
+
+	
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiry/recentlyDetermined.do?num_days=30&nodeNum=5263" class="linkitem" id="node-5263">Consents (Last 30 Days)</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiry/currentlyAdvertised.do?&orderBy=suburb&nodeNum=5265" class="linkitem" id="node-5265">Currently Advertised</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiryInit.do?doc_type=100&nodeNum=5270" class="linkitem" id="node-5270">DA Enquiry</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiryInit.do?doc_type=108&nodeNum=7561" class="linkitem" id="node-7561">Section 82a Enquiry</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiryInit.do?doc_type=5&nodeNum=7652" class="linkitem" id="node-7652">BA Enquiry</a>
+        </li>
+  
+
+
+
+				</ul>
+			</div>
+			
+			 
+			</div>
+		</li>
+	
+
+
+	
+			
+				
+					
+				
+			
+
+			
+
+			
+				
+			
+
+			
+
+	
+			
+				
+					
+				
+			
+
+			
+					
+						
+					
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+			<li id="siteaccesspanel_3">
+				<div class="menu-group">
+					<div class="menu-header-panel" title="Drag to change panel order">
+						<h3 class="panel-handle">History</h3>
+					</div>
+					<p class="menu-handlers">
+					
+					<a href="/eservice/menu/movePanel.do?id=2" title="Panel Up" class="panel-up">
+										<img src="/eservice/icons/panel_move_up.gif" alt="Up" /></a>
+					
+					<a href="/eservice/menu/minimisePanel.do?id=2" title="Minimise Panel" class="panel-min-max" id="panel-min-max-2" >
+<img src="/eservice/icons/minimise.gif" alt="Minimise" />
+</a>
+
+					</p>
+
+					
+					<ul id="recently-used">
+						
+							<li id="recently-used-0">
+                                <a href="/eservice/daEnquiryInit.do?doc_type=100&nodeNum=5270" class="linkitem">DA Enquiry</a>
+                                
+								
+							</li>
+						
+					</ul>
+					
+				</div>
+			</li>
+	
+
+
+			
+
+			
+				
+			
+
+			
+
+	
+</ul>
+<script type="text/javascript">
+	//Drag n Drop panels
+	Sortable.create('siteaccesspanel', {handle: 'panel-handle', onUpdate:function(){new Ajax.Request(webContextPath + '/resequencePanels.do', {method: 'post', parameters:Sortable.serialize('siteaccesspanel')})}});
+</script>
+
+<p id="scroll-trigger">14</p>
+<p id="alternate-scroll-trigger"></p>
+<p id="pixel-height-base-rate-for-list-item">24</p>
+											</div>
+										</div>
+									
+								
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-9" id="bstrap-main">
+						<div id="main-content">
+							
+								<div class="transaction-area" id="transaction-area"></div>
+							
+							
+							<!-- END MENU CONTENT -->
+							
+							<div class="unique-content" id="daEnquiry_daEnquiry">
+<div class="daEnquirySpecific" id="daEnquiry_daEnquiryDocumentType100">
+
+								
+
+
+
+
+
+
+	
+	
+		
+		<h1 class="functionHeader">
+			
+          
+          
+              Development Application Enquiry
+          
+	  
+			
+		</h1>
+	
+	
+
+	
+	
+<div id="leftcontent">
+
+			
+
+
+
+
+
+<div class="infopanel">    
+	<!-- CIVICA-INFO-START -->   
+	
+        <div id="infopanel-header">
+	        <h4 class="entryHeader" >
+	            
+		Instructions
+		
+	        </h4>
+        </div>
+	
+    <div id="instructions-content" class="instructions">
+
+        
+
+
+
+
+
+To make a DA Enquiry, please enter the DA No or the property details.
+
+    </div>
+
+	<!-- CIVICA-INFO-END -->
+</div>
+
+</div>
+<div id="rightcontent">
+		
+			
+		
+
+
+
+
+<div class="bodypanel" id="bodypanel1">   		
+	<!-- CIVICA-CONTENT-START:bodypanel1 -->
+	
+   <h4 class="non_table_headers" >
+		
+		
+	      		Application Details
+	        
+    </h4>
+
+		<?xml version="1.0" encoding="UTF-8"?>
+<div>
+  <form action="daEnquiry.do" id="daEnquiryForm" name="daEnquiryForm" class="form-horizontal">
+    <fieldset>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">DA Number</label>
+        <div class="col-sm-9">
+          <input type="text" class="text-medium" name="number" id="DANumber" size="10" maxlength="10" errors="DANumber" value="" />
+          <span class="subText">eg 121/2005</span>
+        </div>
+      </div>
+      <p />
+      <p class="rowDataOnly">
+        <span class="rowInfo">
+          <strong>OR</strong>
+          use any of the following search fields:
+        </span>
+      </p>
+      <p>
+        
+        &nbsp;
+        
+      </p>
+      <fieldset>
+        <h2>Lodgement Date</h2>
+        <div class="radio-inline-group">
+          <label class="radio-inline">
+            <input type="radio" name="lodgeRangeType" id="lodgeRangeType" onclick="javascript:setDateRange('', '', 'DADateFrom', 'DADateTo')" />
+            <span class="radioText">Specified Range</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="lodgeRangeType" id="lodgeRangeType" onclick="javascript:setDateRange('26/05/2019','30/05/2019', 'DADateFrom', 'DADateTo')" />
+            <span class="radioText">This Week</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="lodgeRangeType" id="lodgeRangeType" onclick="javascript:setDateRange('19/05/2019','25/05/2019', 'DADateFrom', 'DADateTo')" />
+            <span class="radioText">Last Week</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="lodgeRangeType" id="lodgeRangeType" onclick="javascript:setDateRange('01/05/2019','31/05/2019', 'DADateFrom', 'DADateTo')" />
+            <span class="radioText">This Month</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="lodgeRangeType" id="lodgeRangeType" onclick="javascript:setDateRange('01/04/2019','30/04/2019', 'DADateFrom', 'DADateTo')" />
+            <span class="radioText">Last Month</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <span id="daFromDateRow">
+            <label class="col-md-2 col-xs-3 control-label" for="DADateFrom" id="daFromDateLabel">From</label>
+            <div class="inputField col-md-4 col-xs-9" id="daFromDateInput">
+              <input type="text" class="datepick text-small" name="dateFrom" id="DADateFrom" size="10" maxlength="10" errors="DADateFrom" value="" />
+            </div>
+          </span>
+          <span id="daToDateRow">
+            <label class="col-md-2 col-xs-3 control-label" for="DADateTo" id="daToDateLabel">To</label>
+            <div class="inputField col-md-4 col-xs-9" id="daToDateInput">
+              <input type="text" class="datepick text-small" name="dateTo" id="DADateTo" size="10" maxlength="10" errors="DADateTo" value="" />
+            </div>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <h2>Determination Date</h2>
+        <div class="radio-inline-group">
+          <label class="radio-inline">
+            <input type="radio" name="detRangeType" id="detRangeType" onclick="javascript:setDateRange('','', 'detDateFromString', 'detDateToString')" />
+            <span class="radioText">Specified Range</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="detRangeType" id="detRangeType" onclick="javascript:setDateRange('26/05/2019','30/05/2019', 'detDateFromString', 'detDateToString')" />
+            <span class="radioText">This Week</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="detRangeType" id="detRangeType" onclick="javascript:setDateRange('19/05/2019','25/05/2019', 'detDateFromString', 'detDateToString')" />
+            <span class="radioText">Last Week</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="detRangeType" id="detRangeType" onclick="javascript:setDateRange('01/05/2019','31/05/2019', 'detDateFromString', 'detDateToString')" />
+            <span class="radioText">This Month</span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="detRangeType" id="detRangeType" onclick="javascript:setDateRange('01/04/2019','30/04/2019', 'detDateFromString', 'detDateToString')" />
+            <span class="radioText">Last Month</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <span id="daFromDateRow">
+            <label class="col-md-2 col-xs-3 control-label" for="detDateFromString" id="daFromDateLabel">From</label>
+            <div class="inputField col-md-4 col-xs-9" id="detFromDateInput">
+              <input type="text" class="datepick text-small" name="detDateFromString" id="detDateFromString" size="10" maxlength="10" errors="DADateFrom" value="" />
+            </div>
+          </span>
+          <span id="daToDateRow">
+            <label class="col-md-2 col-xs-3 control-label" for="detDateToString" id="deToDateLabel">To</label>
+            <div class="inputField col-md-4 col-xs-9" id="etToDateInput">
+              <input type="text" class="datepick text-small" name="detDateToString" id="detDateToString" size="10" maxlength="10" errors="DADateTo" value="" />
+            </div>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <h2>Property Details</h2>
+        <div class="form-group" id="streetNameRow">
+          <label class="control-label col-sm-3" for="streetName">Street Name</label>
+          <div class="col-sm-9">
+            <input type="text" class="text-large" name="streetName" id="streetName" size="20" onblur="javascript:getHouseNum(); javascript:getSuburb()" value="" />
+            <div id="streetHints" class="autocompleter">
+              
+              &nbsp;
+              
+            </div>
+          </div>
+        </div>
+        <div class="form-group" id="suburbDropdownRow">
+          <label class="control-label col-sm-3" for="suburb">Suburb</label>
+          <div class="col-sm-9">
+            <div id="suburbSelect">
+              <select class="select-medium" name="suburb" id="suburb">
+                <option value="0" selected="selected">- -None Selected- -</option>
+                <option value="5">BELLEVUE HILL</option>
+                <option value="10">BONDI JUNCTION</option>
+                <option value="15">DARLING POINT</option>
+                <option value="20">DOUBLE BAY</option>
+                <option value="25">EDGECLIFF</option>
+                <option value="30">PADDINGTON</option>
+                <option value="35">POINT PIPER</option>
+                <option value="40">ROSE BAY</option>
+                <option value="45">VAUCLUSE</option>
+                <option value="50">WATSONS BAY</option>
+                <option value="55">WOOLLAHRA</option>
+                <option value="99">X-PROBLEM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" id="unitNumberRow">
+          <label class="control-label col-sm-3" for="unitNum">Unit</label>
+          <div class="col-sm-9">
+            <input type="text" class="text-mini" name="unitNum" id="unitNum" size="10" value="" />
+          </div>
+        </div>
+        <div class="form-group" id="houseNumRow">
+          <label class="control-label col-sm-3" for="houseNum">House No.</label>
+          <div class="col-sm-9">
+            <div id="houseNumSelect">
+              <select class="select-medium" name="houseNum" id="houseNum">
+                <option value="0&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;">- -None Selected- -</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" id="planNumberRow">
+          <label class="control-label col-sm-3" for="planNumber">Plan</label>
+          <div class="col-sm-9">
+            <input type="text" class="text-small" name="planNumber" id="planNumber" size="10" value="" />
+          </div>
+        </div>
+        <div class="form-group" id="strataPlanRow">
+          <label class="control-label col-sm-3" for="strataPlan">Strata Plan</label>
+          <div class="col-sm-9">
+            <input type="text" class="text-small" name="strataPlan" id="strataPlan" size="10" value="" />
+          </div>
+        </div>
+        <div class="form-group" id="lotRow">
+          <label class="control-label col-sm-3" for="lotNumber">Lot</label>
+          <div class="col-sm-9">
+            <input type="text" class="text-small" name="lotNumber" id="lotNumber" size="10" value="" />
+          </div>
+        </div>
+        <div class="form-group" id="propertyNameRow">
+          <label class="control-label col-sm-3" for="propertyName">Place</label>
+          <div class="col-sm-9">
+            <input type="text" class="text-large" name="propertyName" id="propertyName" size="20" value="" />
+          </div>
+        </div>
+      </fieldset>
+      <p class="rowDataOnly">
+        <span class="rowInfo">
+          <strong>AND</strong>
+          the following search field:
+        </span>
+      </p>
+      <p>
+        
+        &nbsp;
+        
+      </p>
+      <fieldset>
+        <h2>Options</h2>
+        <div class="radio">
+          <label>
+            <input type="radio" name="searchMode" value="A" id="searchModeA" checked="checked" />
+            All DAs
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="searchMode" value="D" id="searchModeD" />
+            Determined DAs
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="searchMode" value="P" id="searchModeP" />
+            DAs Awaiting Decision
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="searchMode" value="C" id="searchModeC" />
+            Currently Advertised DAs
+          </label>
+        </div>
+      </fieldset>
+    </fieldset>
+    <div class="button-panel">
+      <input type="submit" name="submitButton" class="button" value="Search" onclick="javascript:checkDetDatesMakeSense()" />
+      <input type="button" name="clearButton" class="button" value="Clear" onclick="javascript:clearDaEnquiryFields()" />
+    </div>
+  </form>
+</div>
+
+
+	<!-- CIVICA-CONTENT-END:bodypanel1 -->
+</div>
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</div>
+
+
+							</div>
+</div>
+     
+						</div>
+					</div>
+
+				</div>
+			</div> <!-- container -->
+		</div> <!-- content -->
+
+		<div id="bottom" class="tabbed">
+			<div class="container" id="bottom-container">
+				<div class="row">
+					
+					<div class="footer">
+						<p>&#169; Civica Pty. Ltd. 2016
+							
+						</p>
+						<p id="web-context-path">/eservice</p>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- End page div -->
+
+
+	
+
+<!-- End Bootstrap eServices -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- iServices -->
+
+	</body>
+</html>

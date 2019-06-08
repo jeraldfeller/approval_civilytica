@@ -2,7 +2,8 @@
 
 use Aiden\Models\Das;
 
-class BurwoodTask extends _BaseTask {
+class BurwoodTask extends _BaseTask
+{
 
     public $council_name = "Burwood";
 
@@ -13,9 +14,60 @@ class BurwoodTask extends _BaseTask {
     public $council_default_param = "thismonth";
 
     /**
+     * This will set a cookie so we can scrape the DAs
+     */
+    public function acceptedTerms()
+    {
+
+        $url = 'http://ecouncil.burwood.nsw.gov.au/Home/DisclaimerProcessing';
+        $formData['agreed'] = "true";
+
+        $formData = http_build_query($formData);
+
+        $requestHeaders = [
+            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+            "Content-Type: application/x-www-form-urlencoded",
+            "Host: ecouncil.burwood.nsw.gov.au",
+            "Origin: http://ecouncil.burwood.nsw.gov.au",
+            "Referer: http://ecouncil.burwood.nsw.gov.au/Home/Disclaimer",
+            "Content-Length: " . strlen($formData),
+        ];
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $formData);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $requestHeaders);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, !$this->config->dev);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, !$this->config->dev);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_COOKIEFILE, $this->config->directories->cookiesDir . 'cookies.txt');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, $this->config->directories->cookiesDir . 'cookies.txt');
+        curl_setopt($ch, CURLOPT_USERAGENT, $this->config->useragent);
+
+        $output = curl_exec($ch);
+        $errno = curl_errno($ch);
+        $errmsg = curl_error($ch);
+
+        curl_close($ch);
+
+        if ($errno !== 0) {
+
+            $message = "cURL error: " . $errmsg . " (" . $errno . ")";
+            $this->logger->error($message);
+            return false;
+        }
+
+    }
+
+    /**
      * Request the initial page and receive a cookie so we can access the DAs
      */
-    public function getUserContainer() {
+    public function getUserContainer()
+    {
 
         $url = "https://ecouncil.burwood.nsw.gov.au/eservice/daEnquiryInit.do?doc_typ=10&nodeNum=219";
 
@@ -47,7 +99,8 @@ class BurwoodTask extends _BaseTask {
 
     }
 
-    public function scrapeAction($params = []) {
+    public function scrapeAction($params = [])
+    {
 
         if (!isset($params[0])) {
             return false;
@@ -76,37 +129,60 @@ class BurwoodTask extends _BaseTask {
         }
 
         // Request initial page to retrieve cookie so we're allowed access to DAs
-        $this->getUserContainer();
+        $this->acceptedTerms();
 
-        // Initial URL
-        $url = "https://ecouncil.burwood.nsw.gov.au/eservice/daEnquiry.do"
-                . "?number="
-                . "&lodgeRangeType=on"
-                . "&dateFrom=" . urlencode($dateStart->format("d/m/Y"))
-                . "&dateTo=" . urlencode($dateEnd->format("d/m/Y"))
-                . "&detDateFromString="
-                . "&detDateToString="
-                . "&streetName="
-                . "&suburb=0"
-                . "&unitNum="
-                . "&houseNum=0%0D%0A%09%09%09%09%09"
-                . "&planNumber="
-                . "&strataPlan="
-                . "&lotNumber="
-                . "&propertyName="
-                . "&searchMode=A"
-                . "&submitButton=Search";
+        $url = 'http://ecouncil.burwood.nsw.gov.au/Application/GetApplications';
+        $postFields = [
+            "draw" => 1,
+            "columns[0][data]" => 0,
+            "columns[0][searchable]" => true,
+            "columns[0][orderable]" => false,
+            "columns[0][search][regex]" => false,
+            "columns[1][data]" => 1,
+            "columns[1][searchable]" => true,
+            "columns[1][orderable]" => false,
+            "columns[1][search][regex]" => false,
+            "columns[2][data]" => 2,
+            "columns[2][searchable]" => true,
+            "columns[2][orderable]" => false,
+            "columns[2][search][regex]" => false,
+            "columns[3][data]" => 3,
+            "columns[3][searchable]" => true,
+            "columns[3][orderable]" => false,
+            "columns[3][search][regex]" => false,
+            "columns[4][data]" => 4,
+            "columns[4][searchable]" => true,
+            "columns[4][orderable]" => false,
+            "columns[4][search][regex]" => false,
+            "start" => 0,
+            "length" => 100,
+            "search[regex]" => false,
+            "json" => '{"ApplicationNumber":null,"ApplicationYear":null,"DateFrom":"' . $dateStart->format("d/m/Y") . '","DateTo":"' . $dateEnd->format("d/m/Y") . '","DateType":"2","RemoveUndeterminedApplications":true,"ApplicationDescription":null,"ApplicationType":null,"UnitNumberFrom":null,"UnitNumberTo":null,"StreetNumberFrom":null,"StreetNumberTo":null,"StreetName":null,"SuburbName":null,"PostCode":null,"PropertyName":null,"LotNumber":null,"PlanNumber":null,"ShowOutstandingApplications":false,"ShowExhibitedApplications":false,"PropertyKeys":null,"PrecinctValue":null,"IncludeDocuments":true}'
+
+        ];
+
+        $postFields = http_build_query($postFields);
+        $requestHeaders = [
+            "Accept: application/json, text/javascript, */*; q=0.01",
+            "Content-Type: application/x-www-form-urlencoded",
+            "Host: ecouncil.burwood.nsw.gov.au",
+            "Origin: http://ecouncil.burwood.nsw.gov.au",
+        ];
+
 
         echo $url . "\r\n";
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $requestHeaders);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, !$this->config->dev);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, !$this->config->dev);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 300);
         curl_setopt($ch, CURLOPT_COOKIEFILE, $this->config->directories->cookiesDir . 'cookies.txt');
         curl_setopt($ch, CURLOPT_COOKIEJAR, $this->config->directories->cookiesDir . 'cookies.txt');
         curl_setopt($ch, CURLOPT_USERAGENT, $this->config->useragent);
@@ -121,181 +197,50 @@ class BurwoodTask extends _BaseTask {
             return false;
         }
 
-        $html = \Sunra\PhpSimple\HtmlDomParser::str_get_html($output);
-        if (!$html) {
-            $this->logger->error("Could not parse HTML");
-            return false;
-        }
+        $data = json_decode($output);
+        $data = $data->data;
+        for ($i = 0; $i < count($data); $i++) {
+            $councilUrl = 'http://ecouncil.burwood.nsw.gov.au/Application/ApplicationDetails/' . $data[$i][0] . '/';
+            $councilReference = $data[$i][1];
+            $lodgementDate = $data[$i][3];
+            $this->logger->info($councilReference);
+            $da = Das::exists($this->getCouncil()->getId(), $councilReference) ?: new Das();
+            $da->setCouncilId($this->getCouncil()->getId());
+            $da->setCouncilReference($councilReference);
+            $da->setCouncilUrl($councilUrl);
+            $da->setLodgeDate(\DateTime::createFromFormat("d/m/Y", $lodgementDate));
+            $this->saveDa($da);
 
-        $daIndex = 0;
-
-        $resultElements = $html->find("div");
-        foreach ($resultElements as $resultElement) {
-
-            $headerElement = $resultElement->prev_sibling();
-            if (!$headerElement || $headerElement->tag !== "h4") {
-                continue;
-            }
-
-            foreach ($resultElement->children() as $rowDataElement) {
-
-                if ($rowDataElement->class !== "rowDataOnly") {
-                    continue;
-                }
-
-                $key = $this->cleanString($rowDataElement->children(0)->innertext());
-                $value = $this->cleanString($rowDataElement->children(1)->innertext());
-
-                if ($key === "Application No.") {
-
-                    $daCouncilReference = $value;
-                    $da = Das::exists($this->getCouncil()->getId(), $daCouncilReference) ?: new Das();
-                    $da->setCouncilId($this->getCouncil()->getId());
-                    $da->setCouncilReference($daCouncilReference);
-                }
-            }
-
-            if ($this->saveDa($da)) {
-
-                /**
-                 * This council's website sets DA-specific URLs in memory, so we'll have to visit them right away.
-                 * e.g. https://ecouncil.burwood.nsw.gov.au/eservice/daEnquiryDetails.do?index=0
-                 * would refer to a different DA for two separate sessions, so we have to scrape meta in the same session
-                 */
-                $this->scrapeMeta($da, $daIndex);
-            }
-
-            $this->logger->info("");
-            $daIndex++;
         }
 
         $this->getCouncil()->setLastScrape(new DateTime());
         $this->getCouncil()->save();
         $logMsg = "Done.";
+        $this->scrapeMetaAction();
         $this->logger->info($logMsg);
 
     }
+    
+    protected function extractDescription($html, $da, $params = null): bool
+    {
 
-    public function scrapeMeta($da, $daIndex, $params = null) {
-
-        // Weird Phalcon bug doesn't allow us to save model twice without errors.
-        $oldDaId = $da->getId();
-        unset($da);
-        $da = Das::findFirstById($oldDaId);
-        if ($da === false) {
-
-            $this->logger->critical("Could not find related development application in scrapeMeta()-method.");
-            return false;
-        }
-
-        $url = "https://ecouncil.burwood.nsw.gov.au/eservice/daEnquiryDetails.do?index=" . $daIndex;
-
-        $this->logger->info("Scraping meta development application [{da_id}]...", ["da_id" => $da->getId()]);
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, !$this->config->dev);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, !$this->config->dev);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-        curl_setopt($ch, CURLOPT_COOKIEFILE, $this->config->directories->cookiesDir . 'cookies.txt');
-        curl_setopt($ch, CURLOPT_COOKIEJAR, $this->config->directories->cookiesDir . 'cookies.txt');
-        curl_setopt($ch, CURLOPT_USERAGENT, $this->config->useragent);
-
-        $output = curl_exec($ch);
-        $errno = curl_errno($ch);
-        $errmsg = curl_error($ch);
-        curl_close($ch);
-
-        if ($errno !== 0) {
-
-            $logMsg = sprintf("cURL error: [%s] (%s)", $errmsg, $errno);
-            $this->logger->info($logMsg);
-            return false;
-        }
-
-        $html = \Sunra\PhpSimple\HtmlDomParser::str_get_html($output);
-        if (!$html) {
-
-            $logMsg = "Could not parse HTML";
-            $this->logger->info($logMsg);
-            return false;
-        }
-
-        // Extract addresses is a core method, without it don't run.
-        if (method_exists($this, "extractAddresses")) {
-            $extractedAddresses = $this->extractAddresses($html, $da);
-        }
-        else {
-
-            $this->logger->critical("Current class is not being able to extract address(es).");
-            return false;
-        }
-
-        foreach ($this->getRequiredMethods() as $method) {
-            if (method_exists($this, $method)) {
-                $this->{$method}($html, $da);
-            }
-        }
-
-        $da->setCrawled(true);
-        if ($da->save()) {
-            $this->logger->info("Finished.");
-        }
-        else {
-            $this->logger->info("Something went wrong when trying to update crawl status ({error})", ["error" => print_r($da->getMessages(), true)]);
-        }
-
-    }
-
-    public function scrapeMetaAction() {
-
-        $this->logger->warning("This method cannot be run independently from the scrape()-method. Stopping execution.");
-        return false;
-
-    }
-
-    protected function extractDescription($html, $da, $params = null): bool {
-
-        $keyElements = $html->find("span[class=key]");
-        foreach ($keyElements as $keyElement) {
-
-            $keyText = $this->cleanString($keyElement->innertext());
-            if (strpos(strtolower($keyText), "type of work") === false) {
-                continue;
-            }
-
-            $valueElement = $keyElement->next_sibling();
-            if ($valueElement === null) {
-                continue;
-            }
-
-            $value = $this->cleanString($valueElement->innertext());
+        $container = $html->find('#description', 0);
+        $value = $this->cleanString($container->innertext());
+        if($value != ''){
             return (strlen($value) > 0 && $this->saveDescription($da, $value));
         }
-
         return false;
 
     }
 
-    protected function extractEstimatedCost($html, $da, $params = null): bool {
+    protected function extractEstimatedCost($html, $da, $params = null): bool
+    {
 
-        $keyElements = $html->find("span[class=key]");
-        foreach ($keyElements as $keyElement) {
-
-            $keyText = $this->cleanString($keyElement->innertext());
-            if (strpos(strtolower($keyText), "cost of work") === false) {
-                continue;
-            }
-
-            $valueElement = $keyElement->next_sibling();
-            if ($valueElement === null) {
-                continue;
-            }
-
-            $value = $this->cleanString($valueElement->innertext());
+        $container = $html->find('#estimatedCost', 0);
+        $div = $container->next_sibling();
+        if($div){
+            $td = $div->find('td', 0);
+            $value = $this->cleanString($td->innertext());
             return $this->saveEstimatedCost($da, $value);
         }
 
@@ -303,54 +248,30 @@ class BurwoodTask extends _BaseTask {
 
     }
 
-    protected function extractLodgeDate($html, $da, $params = null): bool {
-
-        $keyElements = $html->find("span[class=key]");
-        foreach ($keyElements as $keyElement) {
-
-            $keyText = $this->cleanString($keyElement->innertext());
-            if (strpos(strtolower($keyText), "lodged") === false) {
-                continue;
-            }
-
-            $valueElement = $keyElement->next_sibling();
-            if ($valueElement === null) {
-                continue;
-            }
-
-            $value = $this->cleanString($valueElement->innertext());
-            $date = \DateTime::createFromFormat("d/m/Y", $value);
-            return $this->saveLodgeDate($da, $date);
-        }
-
+    protected function extractLodgeDate($html, $da, $params = null): bool
+    {
         return false;
 
     }
 
-    protected function extractPeople($html, $da, $params = null): bool {
+    protected function extractPeople($html, $da, $params = null): bool
+    {
 
         $addedPeople = 0;
-        $possibleRoles = ["officer", "applicant", "certifier"];
-        $keyElements = $html->find("span[class=key]");
-
-        foreach ($keyElements as $keyElement) {
-
-            foreach ($possibleRoles as $possibleRole) {
-
-                $keyText = $this->cleanString($keyElement->innertext());
-                if (strpos(strtolower($keyText), $possibleRole) === false) {
-                    continue;
-                }
-
-                $valueElement = $keyElement->next_sibling();
-                if ($valueElement === null) {
-                    continue;
-                }
-
-                $value = $this->cleanString($valueElement->innertext());
-                if ($this->saveParty($da, $keyText, $value)) {
+        $container = $html->find('#people', 0);
+        $div = $container->next_sibling();
+        if($div){
+            $tr = $div->find('tr');
+            foreach($tr as $row){
+                $td = $row->find('td', 0);
+                $text = trim($td->innertext());
+                $textArr = explode(':', $text);
+                $role = $this->cleanString($textArr[0]);
+                $people = $this->cleanString($textArr[1]);
+                if ($this->saveParty($da, $role, $people)) {
                     $addedPeople++;
                 }
+
             }
         }
 
@@ -358,40 +279,47 @@ class BurwoodTask extends _BaseTask {
 
     }
 
-    protected function extractAddresses($html, $da, $params = null): bool {
+    protected function extractAddresses($html, $da, $params = null): bool
+    {
 
-        $keyElements = $html->find("span[class=key]");
-        foreach ($keyElements as $keyElement) {
-
-            $keyText = $this->cleanString($keyElement->innertext());
-            if (strpos(strtolower($keyText), "property details") === false) {
-                continue;
+        $addressCount = 0;
+        $value = $html->find('#property-list', 0);
+        if($value){
+            $addresses = explode('<br/>', $value->innertext());
+            for($i = 0; $i < count($addresses); $i++){
+                $address = $this->cleanString($addresses[$i]);
+                $this->saveAddress($da, $address);
+                $addressCount++;
             }
 
-            $valueElement = $keyElement->next_sibling();
-            if ($valueElement === null) {
-                continue;
-            }
-
-            $value = $this->cleanString($valueElement->innertext());
-            return (strlen($value) > 0 && $this->saveAddress($da, $value));
         }
 
+
+        return ($addressCount > 0 ? true : false);
+
+    }
+
+    protected function extractApplicants($html, $da, $params = null): bool
+    {
         return false;
 
     }
 
-    protected function extractApplicants($html, $da, $params = null): bool {
+    protected function extractOfficers($html, $da, $params = null): bool
+    {
+        $value = $html->find('#officerName', 0);
+        if($value){
+            $officer = $this->cleanString($value->innertext());
+            if ($this->saveParty($da, 'Officer', $officer)) {
+               return true;
+            }
+        }
         return false;
 
     }
 
-    protected function extractOfficers($html, $da, $params = null): bool {
-        return false;
-
-    }
-
-    protected function extractDocuments($html, $da, $params = null): bool {
+    protected function extractDocuments($html, $da, $params = null): bool
+    {
         return false;
 
     }

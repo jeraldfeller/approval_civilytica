@@ -1,0 +1,888 @@
+
+
+
+
+
+
+
+
+
+      
+	
+    
+
+
+
+		
+
+
+      
+	
+    
+    
+  
+
+
+  
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+
+<html lang="en-AU">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<title>
+			Woollahra e-Services
+		</title>
+		<link rel="stylesheet" href="/eservice/library/bootstrap-335.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/jquery-ui.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/jquery-ui.structure.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/jquery-ui.theme.min.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/e-services.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/calendar.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/eservice/library/daEnquiry_daEnquiryResults.css" type="text/css" media="screen, projection" >
+<!--[if IE 6]>
+<link rel="stylesheet" href="/eservice/library/ie6.css" type="text/css" media="screen, projection" >
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" href="/eservice/library/ie8.css" type="text/css" media="screen, projection" >
+<![endif]-->
+<link rel="stylesheet" href="/eservice/library/e-print.css" type="text/css" media="print" >
+<link rel="stylesheet" href="/eservice/library/header-eserv.css" type="text/css" media="screen, projection, print" >
+<link rel="stylesheet" href="/council/eservice/default/council_style.css" type="text/css" media="screen, projection, print" >
+
+		<script>var AUTHJS = {};AUTHJS.productName = "i-Services";</script>
+<script type="text/javascript" src="/eservice/jscalendar-1.0/calendar.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery/jquery-1.11.3.min.js"></script>
+<script>AUTHJS.productName = "e-Services";</script>
+<script type="text/javascript" src="/eservice/javascript/tether-1.3.3.js"></script>
+<script type="text/javascript" src="/eservice/javascript/modernizr-283.min.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery/bootstrap-335.min.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery/jquery-ui-datepicker.min.js"></script>
+<script type="text/javascript" src="/eservice/javascript/e-services-page.js"></script>
+<script type="text/javascript" src="/eservice/javascript/prototype.js"></script>
+<script type="text/javascript" src="/eservice/javascript/civica.jquery.plugins.js"></script>
+<script type="text/javascript" src="/eservice/javascript/civica.common.init.js"></script>
+<script type="text/javascript" src="/eservice/javascript/civica.jquery.functions.js"></script>
+<script type="text/javascript" src="/eservice/javascript/util.js"></script>
+<script type="text/javascript" src="/eservice/javascript/json2.js"></script>
+<script type="text/javascript" src="/eservice/javascript/effects.js"></script>
+<script type="text/javascript" src="/eservice/javascript/controls.js"></script>
+<script type="text/javascript" src="/eservice/javascript/dragdrop.js"></script>
+<script type="text/javascript" src="/eservice/javascript/lightbox.js"></script>
+<script type="text/javascript" src="/eservice/javascript/menu.js"></script>
+<script type="text/javascript" src="/eservice/javascript/menuScroll.js"></script>
+<script type="text/javascript" src="/eservice/javascript/sitemap.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery.imageTickBox.js"></script>
+<script type="text/javascript" src="/eservice/javascript/jquery.metadata.js"></script>
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		
+		
+		
+		
+	</head>
+	
+	<body
+		
+	>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var initialTabPage= "null";
+	jQuery(document).ready(function() {
+		if (initialTabPage != "null") {
+			if (initialTabPage=="sitemap"){
+				initialTabPage="#sitemap-controller";    
+			} else {
+				initialTabPage="#dashboard-controller";       
+			}
+			jQuery(initialTabPage + " a.tab-clicker").not(".tabs-content *").click();
+		}
+		
+	});
+
+	(function() {
+		var isBootstrapEvent = false;
+		if (window.jQuery) {
+			var all = jQuery('*');
+			jQuery.each(['hide.bs.dropdown', 
+				'hide.bs.collapse', 
+				'hide.bs.modal', 
+				'hide.bs.tooltip',
+				'hide.bs.popover',
+				'hide.bs.tab'], function(index, eventName) {
+				all.on(eventName, function( event ) {
+					isBootstrapEvent = true;
+				});
+			});
+		}
+		var originalHide = Element.hide;
+		Element.addMethods({
+			hide: function(element) {
+				if(isBootstrapEvent) {
+					isBootstrapEvent = false;
+					return element;
+				}
+				return originalHide(element);
+			}
+		});
+	})();
+</script>
+
+
+
+<!-- eServices -->
+
+	<div id="page" class=" tabbed not-logged-in">
+
+	
+
+
+		<div id="masthead" class="navbar navbar-static-top bs-docs-nav">
+			<div class="container" id="masthead-container">
+				<div class="navbar-header">
+					<a class="navbar-brand">
+						<span><img src="/eservice/icons/WoollahraMC.gif" alt="Woollahra Municipal Council" /></span>
+						
+							Woollahra Council
+						
+					</a>
+					<!-- Begin Top Nav -->
+ 
+<div id="menu"><div class="expand">
+ <ul>
+  <li><a href="http://www.woollahra.nsw.gov.au/home">Home</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/council">Council</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/services">Services</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/building_and_development">Building and development</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/library">Library</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/community">Community</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/environment">Environment</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/recreation">Recreation</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/news">News</a></li>
+  <li><a href="http://www.woollahra.nsw.gov.au/events">Events</a></li>
+ </ul>						              
+</div></div>
+
+<!-- End Top Nav -->
+				</div>
+				<!-- masthead Quicklinks start -->
+				<div id="wrapper-quick-links">
+					<ul id="quick-links" class="nav navbar-nav navbar-right">
+						<li class="top-link-home">
+							<a href="/eservice/navigationStart.do" id="quick-link-home">
+								Home
+							</a>
+						</li>
+						
+						
+							
+								<li class="top-link-signin">
+									<a href="/eservice/logonInit.do" id="quick-link-signin">
+										Sign In
+									</a>
+								</li>
+							
+							
+						
+						<li class="top-link-user">
+							<a>
+								<!-- masthead User start -->
+				                
+				                    
+									
+									
+											You are a Guest
+									
+									
+								
+								
+								<!-- masthead User end -->
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- masthead Quicklinks end -->
+			</div>
+			<!-- End container -->
+		</div>
+		<!-- End Masthead -->
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="bcpanel">
+			<div class="container" id="bcpanel-container">
+				
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		<ul id="breadcrumbs">
+
+            
+
+            
+				
+				
+				
+					<li >
+						
+						
+						
+						
+						    
+						    
+			            	    <a href="/council/info/dev_application.htm?nodeNum=5252" onclick="openSearchResultParent(5252);return false;">Development Applications</a>
+			            	
+			            
+					</li>
+					
+			
+				
+				
+				
+					<li class="last-node">
+						
+						
+						
+							<a href="/eservice/daEnquiryInit.do?doc_type=100&nodeNum=5270">DA Enquiry</a> 
+						
+						
+					</li>
+					
+			
+			
+			
+			
+		</ul>			
+		
+
+
+			</div>
+		</div>
+
+		<!-- End Masthead navbar -->
+
+
+		<div id="content">
+
+			<div class="container" id="content-container">
+
+				<div class="row" id="main-row">
+
+					<div class="col-sm-3" id="bstrap-leftnav">
+
+						
+							<div id="search-results" >
+								
+							</div>  
+						
+
+
+						<div id="admin-tabs" >
+							<div id="dashboard" class="tabs-content">
+
+								
+								
+
+
+								
+								
+								<!-- START MENU CONTENT -->
+
+								
+									
+										<div id="menus-toggle">
+											
+												<div id="menus-button" class="btn btn-default">
+													<span id="menus-button-inner">
+														<a id="menus-button-link" href="#">Hide Menus</a>
+													</span>
+												</div>
+											
+											<div id="site-access" class="menu-on">
+												
+
+
+
+
+
+
+
+
+<ul id="siteaccesspanel">
+
+			
+				
+				
+			
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<li id="siteaccesspanel_1">
+			<div class="menu-group">
+				<div class="menu-header-panel" title="Drag to change panel order">
+					<h3 class="panel-handle">Menu</h3>
+				</div>
+				<p class="menu-handlers">
+				
+				<a href="/eservice/menu/minimisePanel.do?id=1" title="Minimise Panel" class="panel-min-max" id="panel-min-max-1" >
+<img src="/eservice/icons/minimise.gif" alt="Minimise" />
+</a>
+
+				</p>
+				
+					
+					
+
+						<div id="menu-search">
+							<form action="/eservice/menu/search.do" class="menu-search-form">
+								<p>
+								
+								<input type="text" size="15" name="search" id="search" class="field"  value="Menu Search" />
+								
+								<input type="submit" id="menu-search-submit" value="Go" class="buttonCalendar" />
+								<img src="/eservice/icons/loading.gif" alt="loading" class="loading" id="menu-search-loading" />
+								</p>
+								<!-- div id="search-autocomplete" class="autocompleter"></div -->
+							</form>
+							<div id="search-results" >
+								
+							</div>
+							
+						</div>
+
+					
+				
+			
+			<div id="scrollingMenuContainer" class="scrolling-container">
+				<ul id="navigation">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			<li class="nav-return" title="Back one menu level"><a href="/eservice/navigationStart.do" id="node-0"><img src="/eservice/icons/parent.gif" alt="Return to " />Development Applications                          </a></li>
+		
+	
+
+	
+
+	
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiry/recentlyDetermined.do?num_days=30&nodeNum=5263" class="linkitem" id="node-5263">Consents (Last 30 Days)</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiry/currentlyAdvertised.do?&orderBy=suburb&nodeNum=5265" class="linkitem" id="node-5265">Currently Advertised</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiryInit.do?doc_type=100&nodeNum=5270" class="linkitem" id="node-5270">DA Enquiry</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiryInit.do?doc_type=108&nodeNum=7561" class="linkitem" id="node-7561">Section 82a Enquiry</a>
+        </li>
+  
+		
+		
+								
+		
+        
+    	    <li class='java'>
+    	
+	       <a href="/eservice/daEnquiryInit.do?doc_type=5&nodeNum=7652" class="linkitem" id="node-7652">BA Enquiry</a>
+        </li>
+  
+
+
+
+				</ul>
+			</div>
+			
+			 
+			</div>
+		</li>
+	
+
+
+	
+			
+				
+					
+				
+			
+
+			
+
+			
+				
+			
+
+			
+
+	
+			
+				
+					
+				
+			
+
+			
+					
+						
+					
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+			<li id="siteaccesspanel_3">
+				<div class="menu-group">
+					<div class="menu-header-panel" title="Drag to change panel order">
+						<h3 class="panel-handle">History</h3>
+					</div>
+					<p class="menu-handlers">
+					
+					<a href="/eservice/menu/movePanel.do?id=2" title="Panel Up" class="panel-up">
+										<img src="/eservice/icons/panel_move_up.gif" alt="Up" /></a>
+					
+					<a href="/eservice/menu/minimisePanel.do?id=2" title="Minimise Panel" class="panel-min-max" id="panel-min-max-2" >
+<img src="/eservice/icons/minimise.gif" alt="Minimise" />
+</a>
+
+					</p>
+
+					
+					<ul id="recently-used">
+						
+							<li id="recently-used-0">
+                                <a href="/eservice/daEnquiryInit.do?doc_type=100&nodeNum=5270" class="linkitem">DA Enquiry</a>
+                                
+								
+							</li>
+						
+					</ul>
+					
+				</div>
+			</li>
+	
+
+
+			
+
+			
+				
+			
+
+			
+
+	
+</ul>
+<script type="text/javascript">
+	//Drag n Drop panels
+	Sortable.create('siteaccesspanel', {handle: 'panel-handle', onUpdate:function(){new Ajax.Request(webContextPath + '/resequencePanels.do', {method: 'post', parameters:Sortable.serialize('siteaccesspanel')})}});
+</script>
+
+<p id="scroll-trigger">14</p>
+<p id="alternate-scroll-trigger"></p>
+<p id="pixel-height-base-rate-for-list-item">24</p>
+											</div>
+										</div>
+									
+								
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-9" id="bstrap-main">
+						<div id="main-content">
+							
+								<div class="transaction-area" id="transaction-area"></div>
+							
+							
+							<!-- END MENU CONTENT -->
+							
+							<div class="unique-content" id="daEnquiry_daEnquiryResults">
+<div class="daEnquirySpecific" id="daEnquiry_daEnquiryResultsDocumentType100">
+
+								
+
+
+
+
+
+
+
+	
+	
+		
+		<h1 class="functionHeader">
+			
+          
+          
+              Development Application Enquiry
+          
+	
+			
+		</h1>
+	
+	
+	<div id="fullcontent" class="no_form">
+	
+	
+
+
+		
+
+
+
+
+
+<div class="infopanel">    
+	<!-- CIVICA-INFO-START -->   
+	
+        <div id="infopanel-header">
+	        <h4 class="entryHeader" >
+	            Instructions
+	        </h4>
+        </div>
+	
+    <div id="instructions-content" class="instructions">
+
+        
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+      Click on the address for the Development Application to see further details. To display the results in a different order, select from the one of the two options below and click the 'Sort' button.	
+	      	
+	   	  
+	         <p><label>Documents Found&nbsp;73</label></p>      
+	   
+	   
+	    
+			  <div id="sortForm">
+			  	
+		      		<form name="registerEnquirySortForm" method="post" action="/eservice/daEnquirySort.do">
+						<fieldset>
+				  			<legend>Sort</legend>
+				  			
+				  				
+								<span id="sortByDatereceivedOption">
+				  					<input type="radio" name="sortBy" value="1" id="sortByDatereceived" />
+				  					<label class="nobold" for="sortByDatereceived">
+				  						Received Date
+				  					</label>
+								</span>
+				  			
+				  				
+								<span id="sortByLocationOption">
+				  					<input type="radio" name="sortBy" value="2" id="sortByLocation" checked/>
+				  					<label class="nobold" for="sortByLocation">
+				  						Location
+				  					</label>
+								</span>
+				  			
+				  				
+								<span id="sortByApplicationNumberOption">
+				  					<input type="radio" name="sortBy" value="3" id="sortByApplicationNumber" />
+				  					<label class="nobold" for="sortByApplicationNumber">
+				  						Application No.
+				  					</label>
+								</span>
+				  			
+				  				
+								<span id="sortBySuburbOption">
+				  					<input type="radio" name="sortBy" value="4" id="sortBySuburb" />
+				  					<label class="nobold" for="sortBySuburb">
+				  						Suburb
+				  					</label>
+								</span>
+				  			
+				  				
+								<span id="sortByUnitHouseNumberOption">
+				  					<input type="radio" name="sortBy" value="5" id="sortByUnitHouseNumber" />
+				  					<label class="nobold" for="sortByUnitHouseNumber">
+				  						Unit/House Number
+				  					</label>
+								</span>
+				  			
+				  				
+								<span id="sortByStreetNameOption">
+				  					<input type="radio" name="sortBy" value="6" id="sortByStreetName" />
+				  					<label class="nobold" for="sortByStreetName">
+				  						Street
+				  					</label>
+								</span>
+				  			
+				  				
+								<span id="sortBySummaryOption">
+				  					<input type="radio" name="sortBy" value="7" id="sortBySummary" />
+				  					<label class="nobold" for="sortBySummary">
+				  						Type Of Work
+				  					</label>
+								</span>
+				  			
+				  				
+								<span id="sortByDeterminationOption">
+				  					<input type="radio" name="sortBy" value="8" id="sortByDetermination" />
+				  					<label class="nobold" for="sortByDetermination">
+				  						Decision
+				  					</label>
+								</span>
+				  			
+				  			<div class="row">
+							  	<input type="submit" name="submit" value="Sort" class="button" />
+							</div>
+						</fieldset>
+			  		</form>
+			  	
+			  </div>
+	  
+	
+	
+	
+
+    </div>
+
+	<!-- CIVICA-INFO-END -->
+</div>
+
+
+		
+			
+		
+<div  class="bodypanel" id="bodypanel1">
+	<!-- CIVICA-CONTENT-START:bodypanel1 -->
+		</div>
+<?xml version="1.0" encoding="UTF-8"?>
+<div><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=0">63 Adelaide Street WOOLLAHRA  NSW  2025</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions to the existing dwelling including a first floor addition</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr M Wilson</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">165/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">14/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$339,500.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=1">3 Attunga Street WOOLLAHRA  NSW  2025</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions to the existing dwelling including new roof (partial)</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Blainey North &amp; Assoc Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">149/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">03/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$110,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=2">71 Balfour Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Roof cover to the alfresco area and the erection of a privacy screen to the internal courtyard</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr H Gogebakan</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">175/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$5,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=3">93 Balfour Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55: Modifications to approved dwelling</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Felton Constructions Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">138/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">01/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=4">18 Bay Street DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Deletion of Conditions C.1, C.4 and I.6 which relate to the sound attenuation and noise control with regard to the operation of the training gym</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">ArchiSpectrum</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr A Mullin</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">286/2016</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=5">33 Caledonia Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions including partial demolition of the existing single storey cottage and the construction of a new two storey rear addition</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr H Wooldridge</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">180/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">22/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$390,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=6">32 Captain Pipers Road VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping Replacing existing fence</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr R Raso</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">186/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">28/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$10,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=7">8 Carrington Avenue BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping Alterations to the car parking arrangement</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">CSA Architects Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">177/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$10,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=8">49 Cascade Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Alterations and additions</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Cracknell &amp; Lonergan Architects</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">170/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">16/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$250,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=9">16 Castra Place DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Internal and external modifications to the approved development</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Fox Johnston</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr P J Boyce</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">48/2016</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">20/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=10">16 Castra Place DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Changes to landscaping, transplantation of two palm trees, removal of four dead palm trees</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Fox Johnston</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">273/2016</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">20/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=11">6 Cecil Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.56 Modification to approved scheme</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Cracknell &amp; Lonergan</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">171/2015</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">16/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=12">22 Chamberlain Avenue ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House: Demolition of existing dwelling and construction of a new dwelling, swimming pool and landscaping</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Felton Constructions SYD Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">162/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">13/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$729,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=13">13-15A Coolong Road VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 and Swimming Pool - Residential: Modifications to approved dwelling</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">TKD Architects Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">304/2018</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">01/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=14">103 Darling Point Road DARLING POINT  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping New terrace, landscaping works, pedestrian gate and associated site works on land described as Lot 1 Community Scheme 270253 which is to be exclusively used by No 27 Eastbourne Road</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mrs S Tavakoli</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">144/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">01/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$180,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=15">49 Dover Road ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions including car parking structure</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mrs S Colquhoun</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">151/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">06/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$600,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=16">43 Dudley Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Delete Condition C.1(c)</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr S E Harrison</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr C James</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">384/2018</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">27/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=17">167 Edgecliff Road WOOLLAHRA  NSW  2025</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Change of the finished floor levels on the lower ground, ground and first floors, additional excavation, relocation of air-conditioning units and other modifications</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr A Galasso</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr O Da Silva</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">218/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">10/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=18">380 Edgecliff Road WOOLLAHRA  NSW  2025</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping Replacement of the existing double garage with a new double garage, new boundary fences and pedestrian entry</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr B M Stokes</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">154/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">08/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$112,500.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=19">158 Fletcher Street WOOLLAHRA  NSW  2025</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House New patio pergola (aluminium louvre roof)</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Sunscreen Patios &amp; Pergolas</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">169/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">15/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$18,860.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=20">14 Glen Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions including a new pavilion addition to the side of the existing dwelling, relocated carport, new swimming pool and landscaping</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Nobbs Radford Architects</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">184/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">24/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$550,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=21">27 Goodhope Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Alterations to windows and doorway facing northern and southern breezeways</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Ms H M Durham</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr P Pearce</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">25/2016</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">01/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=22">1A Guilfoyle Avenue DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Event/Festival Guilfoyle Park monthly Sunday market</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Sydney East Business Chamber</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">163/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">14/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$3,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=23">11-15 Guilfoyle Avenue DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Residential Flat Building 3 Storeys Caretakers apartment at the carpark level (no physical works)</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Strata Plan 56428</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">160/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">13/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=24">63 Hargrave Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations &amp; additions to the existing dwelling</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">D J Colantonio</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">153/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">08/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$220,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=25">71 Harris Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Replace existing roof tiles with new tiles and modify condition C.1a.</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Hancock Architects</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">432/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">28/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=26">70 Holdsworth Street WOOLLAHRA  NSW  2025</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions to existing terrace house, including demolition of the rear portion of the house, and the addition of a new 3 storey extension and new landscaping.</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Ms R Thakur</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">188/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">28/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$720,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=27">163 Hopetoun Avenue VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Addition of a trafficable terrace with transparent balustrades and access stairs; deletion of Condition No C.1(i)</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr A M Minichiello</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">419/2016</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">01/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=28">88 John Street WOOLLAHRA  NSW  2025</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Minor internal and external modifications to the approved development</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr J R Powell</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr P Pearce</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">467/2016</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$35,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=29">17 John Dykes Avenue VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping: Landscaping and site works</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr A Demetriou</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">158/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$95,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=30">4 Kambala Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions to the existing dwelling including a new garage</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr A Qureshi</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">147/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">03/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$720,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=31">16 Latimer Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House: Demolition of existing structures, construction of a new dwelling and garage, landscaping and site works</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mrs L Perlman</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">145/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">02/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$1,230,816.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=32">7 Loftus Road DARLING POINT  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Strata Subdivision Strata subdivision into 5 lots</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">7 Loftus Road Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">168/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">14/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=33">9 Longworth Avenue POINT PIPER  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Change of use from 3 apartments to a dwelling house. Internal changes to Ground and Basement floorplans. Revision to Cond. 10, 11, 13 &amp; 14.</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr R Biancardi,Mrs L Biancardi</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">646/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p><p class="rowDataOnly"><span class="key">Determination Details</span><span class="inputField">Rejected Application</span></p><p class="rowDataOnly"><span class="key">Determination Date</span><span class="inputField">14/05/2019</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=34">31 March Street BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House and Swimming Pool - Residential Alterations and additions to existing residence including a new pool and modifications to the garage door and the pedestrian entry</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr B P Jonker</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">156/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$725,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=35">76 New Beach Road DARLING POINT  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Swimming Pool - Residential New swimming pool</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Robinson Urban Planning Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">185/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">24/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$41,800.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=36">319 New South Head Road DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Internal layout and external modifications</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">MHN Design Union Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">66/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">15/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=37">512 New South Head Road DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Child Care New pre-school on the ground floor and associated outdoor play area</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Graham Bakewell Architect</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">155/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">08/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$973,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=38">548 New South Head Road DOUBLE BAY  NSW  2028</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Deletion of Conditions A.6 and C.14 relating to ground anchors and underpinning works</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Woollahra Municipal Council</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">11/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">08/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p><p class="rowDataOnly"><span class="key">Determination Details</span><span class="inputField">Approved</span></p><p class="rowDataOnly"><span class="key">Determination Date</span><span class="inputField">08/05/2019</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=39">85-97 New South Head Road EDGECLIFF  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Alts and Adds to Residential Flat Bldg Enclosure of existing part of covered balcony with aluminium roofing, glazed aluminium window frames and 1.0m high glass balustrade</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr D Macleod</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">164/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">14/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$40,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=40">592B New South Head Road ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Community Facility: To construct a separated bi-directional cycle path on the existing footpath to New South Head Road to connect Double Bay and Rose Bay</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">COMPLETE URBAN PTY LTD</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">152/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">06/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$500,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=41">668-670 New South Head Road ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping Reconstruction of the rear retaining wall fronting Collins Avenue &amp; the removal of street tree</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">SP54275</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">179/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$95,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=42">692 New South Head Road ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Extend opening hours to 10am - 9pm 7 days a week</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Miss A Aowtasakun</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">167/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">14/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=43">701-703 New South Head Road ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Ms P Aiken</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">189/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">29/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$2,376,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=44">18 Newcastle Street ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Shop: New shopfront and access ramp</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr P Perrie</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">150/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">03/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$50,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=45">60 Newcastle Street ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Modifications to the approved seniors' housing development</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Ms H Cheong</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">649/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">02/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=46">1A Nulla Street VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55: Modifications to the approved roof terrace</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr W Z Sellars-Jones</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">406/2018</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">17/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=47">89-93 O'Sullivan Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Modification to the approved scheme</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mrs C Vidor</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr L Kippax</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">400/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=48">Unit 2 566-568 Old South Head Road ROSE BAY  NSW  2029</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Residential Flat Building 3 Storeys: Patio extension to unit 2</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Shore Architects</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">173/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">20/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$17,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=49">236 Old South Head Road VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 and Swimming Pool - Residential Modification to stormwater management and deletion of condition A.1</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr M Szczerbicki</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">351/2018</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">20/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=50">26-27 Olola Avenue VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions to the existing dwelling including the installation of a passenger lift and modification and expansion of the existing attic</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr A Griffin,Ms Y Azpatova</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">176/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$200,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=51">126-140 Oxford Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Shop Alterations and additions to an existing commercial building including a new third level commercial space (gym/fitness facility) incorporating a mansard roof form with dormer windows to the façade (Oxford Street) and rear</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr A Antoniades</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">146/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">02/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$1,270,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=52">326 Oxford Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Mixed Residential/Commercial Alterations &amp; additions to the existing building (shop top housing)</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr D O'Mahony</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">161/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">13/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$467,515.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=53">11 Pacific Street WATSONS BAY  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55: Modifications to approved alterations and additions</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr J Williams</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr C Michaels</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">247/2011</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=54">4 Rupertswood Avenue BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions to the existing dwelling including reconfiguration of the existing pool and new landscaping</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr L C Macgillivray,Ms E Macgillivry</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">183/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">24/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$715,700.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=55">10 Rupertswood Avenue BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Ancillary Structure/Landscaping Remediation works to existing retaining wall and buttresses</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr R Yee</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">181/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">22/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$70,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=56">13 Russell Street VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Modification to approved landscaping works and deletion of condition A.5</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Ms K Braun</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">92/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=57">9 Stephen Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr D Laybutt</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">148/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">03/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$62,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=58">1 Sutherland Crescent DARLING POINT  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Mechanical Ventilation - RFB Three (3) unauthorised air conditioning units located on the roof</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Outlook Planning and Development</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">157/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$15,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=59">22 Sutherland Crescent DARLING POINT  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Detached Garage/Carport/Shed Minor alterations to existing garage</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr M Byrnes</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">187/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">28/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$48,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=60">105 Sutherland Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Hotel New outdoor seating (footpath and landscaped traffic island) in Sutherland Street adjacent to the Four in Hand Hotel</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr J Azar</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">172/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">17/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$5,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=61">2C Tarrant Avenue BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Attached dual occupancy</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr J Long</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">166/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">14/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$1,430,000.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=62">28 The Crescent ~ VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Alts and Adds to Residential Flat Bldg: Alterations and additions to residential flat building</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr M O'Donnell</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">159/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">10/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$328,570.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=63">45 Union Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Modifications to rear access from timber gate to roller shutter &amp; new awning over rear door</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">I D Raymond,L R Raymond</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Mr R Hood</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">582/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">15/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=64">32A Vaucluse Road VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55: Modified excavation works</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Gergeley &amp; Pinter Architects</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">564/2017</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">09/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=65">46 Vaucluse Road VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Internal and externaml modifications to the approved dwelling-house; re-design and re-positioning of the approved pool; landscaping modifications</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mrs H Huang</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">229/2015</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=66">23 Victoria Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 Modifications to the approved dwelling</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Bruce Stafford &amp; Associates Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">192/2018</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">15/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=67">23 Victoria Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55 and Dwelling House Correction to stamped plans</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Bruce Stafford &amp; Associates Pty Ltd</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">192/2018</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">22/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p><p class="rowDataOnly"><span class="key">Determination Details</span><span class="inputField">Approved</span></p><p class="rowDataOnly"><span class="key">Determination Date</span><span class="inputField">28/05/2019</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=68">29-53 Victoria Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Educational Establishment: Alterations and additions to the Assembly Hall (and associated works) on the upper level of the Main School building</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mr P Oates</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">171/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">17/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$5,520,400.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=69">134 Victoria Road BELLEVUE HILL  NSW  2023</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Section 4.55</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Jensen Projects</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">293/2018</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">28/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$0.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=70">97 Wentworth Road VAUCLUSE  NSW  2030</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Dwelling House Alterations and additions</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Prof D Murrell,Prof G Murrell</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">182/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">24/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$36,576.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=71">William Street PADDINGTON  NSW  2021</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Event/Festival Annual William Street Festival to be held on: 19 October 2019, 17 October 2020, 16 October 2021, 15 October 2022 and 21 October 2023</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Ms C Carraro</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">178/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">21/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$79,480.00</span></p></div><p class="rowDataOnly"> </p><h4 class="non_table_headers"><a class="plain_header" href="/eservice/daEnquiryDetails.do?index=72">Unit 6 24 Yarranabbe Road DARLING POINT  NSW  2027</a></h4><div><p class="rowDataOnly"><span class="key">Type of Work</span><span class="inputField">Mechanical Ventilation - Dwelling - Air Condencer New AC condensor unit above living area on flat roof structure adjacent to the front terrace</span></p><p class="rowDataOnly"><span class="key">Applicant</span><span class="inputField">Mrs E J Wheater</span></p><p class="rowDataOnly"><span class="key">Certifier</span><span class="inputField">Unknown PCA</span></p><p class="rowDataOnly"><span class="key">Application No.</span><span class="inputField">174/2019</span></p><p class="rowDataOnly"><span class="key">Date Lodged</span><span class="inputField">20/05/2019</span></p><p class="rowDataOnly"><span class="key">Cost of Work</span><span class="inputField">$15,000.00</span></p></div><p class="rowDataOnly"> </p><div class="button-panel"><a class="btn btn-primary" href="/eservice/daEnquiryInit.do?nodeNum=5270&amp;goingBack=true">New Search</a></div></div>
+<div>
+
+	<!-- CIVICA-CONTENT-END:bodypanel1 -->
+</div>
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</div>
+							</div>
+</div>
+     
+						</div>
+					</div>
+
+				</div>
+			</div> <!-- container -->
+		</div> <!-- content -->
+
+		<div id="bottom" class="tabbed">
+			<div class="container" id="bottom-container">
+				<div class="row">
+					
+					<div class="footer">
+						<p>&#169; Civica Pty. Ltd. 2016
+							
+						</p>
+						<p id="web-context-path">/eservice</p>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- End page div -->
+
+
+	
+
+<!-- End Bootstrap eServices -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- iServices -->
+
+	</body>
+</html>
+

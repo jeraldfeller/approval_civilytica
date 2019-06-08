@@ -174,10 +174,12 @@ class NorthernbeachesTask extends _BaseTask {
 
     protected function extractEstimatedCost($html, $da, $params = null): bool {
 
-        $keyElements = $html->find("span[class=detailleft]");
+        $keyElements = $html->find("[class=detailleft]");
         foreach ($keyElements as $keyElement) {
 
+
             $keyText = $this->cleanString($keyElement->innertext());
+
             if (preg_match("/cost of work/i", $keyText) === 0) {
                 continue;
             }
@@ -190,6 +192,7 @@ class NorthernbeachesTask extends _BaseTask {
             $value = $this->cleanString($valueElement->innertext());
             return $this->saveEstimatedCost($da, $value);
         }
+
 
         return false;
 
